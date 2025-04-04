@@ -161,9 +161,29 @@
     <a href="./" class="dropdown-item active" aria-current="page">Overview</a>
 </li>
             
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Physics</a>
+    <ul class="dropdown-menu">
+            
 <li>
-    <a href="../waves/" class="dropdown-item">Waves</a>
+    <a href="../physics/waves/" class="dropdown-item">Waves</a>
 </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Readers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../readers/reader-buy/" class="dropdown-item">Purchaseable Readers</a>
+</li>
+            
+<li>
+    <a href="../readers/reader-specs/" class="dropdown-item">RFID Readers</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
                                 </ul>
@@ -189,11 +209,11 @@
 </li>
             
 <li>
-    <a href="../../../networking/internet/local-internet/" class="dropdown-item">Local internet</a>
+    <a href="../../../networking/internet/mobile-internet/" class="dropdown-item">Mobile internet</a>
 </li>
             
 <li>
-    <a href="../../../networking/internet/mobile-internet/" class="dropdown-item">Mobile internet</a>
+    <a href="../../../networking/internet/public-networks/" class="dropdown-item">Public networks</a>
 </li>
     </ul>
   </li>
@@ -264,7 +284,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../waves/" class="nav-link">
+                                <a rel="next" href="../physics/waves/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -316,8 +336,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+            <li class="nav-item" data-bs-level="1"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#rfid-tag-data-storage" class="nav-link">RFID Tag Data Storage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -325,15 +349,96 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="summary">Summary</h2>
+<h1 id="overview">Overview</h1>
 <p>RFID (Radio-frequency identification)</p>
 <ul>
 <li>Electromagnetic fields to automatically identify and track tags attached to objects</li>
-<li>Frequencies</li>
-<li>Low Frequency (LF): 125-134 kHz</li>
-<li>High Frequency (HF): 13.56 MHz</li>
-<li>Ultra High Frequency (UHF): 902-928 MHz (US) or 865-868 MHz (EU)</li>
+<li>These tags contain electronically stored information, and they can be read from a distance without needing line-of-sight.</li>
 </ul>
+<p>Tag</p>
+<ul>
+<li>Contains a microchip (for data) and an antenna (for communication).<ul>
+<li>Passive - no battery, powered by reader signal</li>
+<li>Active - uses internal battery for longer range/more data</li>
+<li>Semi-passive - battery-powered, but only responds when activated</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Frequency (US)</th>
+<th>Frequency (EU)</th>
+<th>Units</th>
+<th>Usage</th>
+<th>Range</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low (LF)</td>
+<td>125–134.2 kHz</td>
+<td>Same</td>
+<td>kHz (10³ Hz)</td>
+<td>Animal tagging, keycards</td>
+<td>Up to ~10 cm</td>
+<td>Works well near water/metal, low interference</td>
+<td>Short range, slow data rate</td>
+</tr>
+<tr>
+<td>High (HF)</td>
+<td>13.56 MHz</td>
+<td>Same</td>
+<td>MHz (10⁶ Hz)</td>
+<td>NFC, smart cards, library systems</td>
+<td>Up to ~1 meter</td>
+<td>Global standard, moderate speed and range</td>
+<td>Some sensitivity to metal and water</td>
+</tr>
+<tr>
+<td>Ultra High (UHF)</td>
+<td>902–928 MHz</td>
+<td>865–868 MHz</td>
+<td>MHz (10⁶ Hz)</td>
+<td>Inventory tracking, supply chain, toll booths</td>
+<td>Up to ~12 meters</td>
+<td>Long range, fast data rate, supports many tags at once</td>
+<td>More affected by metal/liquids, regulated differently</td>
+</tr>
+</tbody>
+</table>
+<p>Also, microwave frequecies @ 2.45 GHz but ignoring atm</p>
+<h2 id="rfid-tag-data-storage">RFID Tag Data Storage</h2>
+<p>Low Frequendcy tags, LF </p>
+<ul>
+<li>chip: EM4100<ul>
+<li>UID (4 bytes)<ul>
+<li>written by manufacturer (unchangeable)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>chip: T5577<ul>
+<li>changable UID</li>
+<li>can upload custom rfid response</li>
+</ul>
+</li>
+</ul>
+<p>High Frequency tags, HF</p>
+<ul>
+<li>Mifare classic<ul>
+<li>UID (4 bytes)<ul>
+<li>written by manufacturer (unchangeable)</li>
+</ul>
+</li>
+<li>16 bytes (1 block) * 4 blocks * 16 sectors = 1024 bytes (writeable)</li>
+</ul>
+</li>
+</ul>
+<p>Some readers can read only a single HF or LF standard.</p>
 <h3 id="docs">Docs</h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Radio-frequency_identification">RFID wiki page</a></li>
@@ -341,6 +446,7 @@
 <h3 id="vids">Vids</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=vEkfa3OMvec&amp;t=230s">RFID How-To: Not only for Arduino</a></li>
+<li><a href="https://www.youtube.com/watch?v=eVIq3--O8bM">RFID Hacking and Cloning with Magic Cards, Proxmark3 and Arduino (T5577)</a></li>
 </ul></div>
             </div>
         </div>
