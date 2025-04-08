@@ -64,3 +64,32 @@
   margin-top: 5px; /* adjust this value to lower the title */
   font-size: 1.1rem; /* default is ~1.1rem — increase this as needed */
 }
+
+/* sidebar UI changes */
+@media screen and (max-width: 1219px) {
+ .md-header__title {
+  margin-top: 0px; /* adjust this value to lower the title */
+  font-size: 1.1rem; /* default is ~1.1rem — increase this as needed */
+ }
+
+ .header-container {
+  display: flex;
+  justify-content: space-between; /* Distribute items with space in between */
+  align-items: center; /* Align items vertically centered */
+}
+
+.hamburger-menu {
+  order: 1; /* Hamburger menu stays on the left */
+}
+
+.logo {
+  order: 2; /* Moves the logo to the right */
+  margin-left: auto; /* Ensures the logo is aligned to the right edge */
+}
+
+.sidebar {
+  display: none; /* Optionally hide sidebar on smaller screens */
+}
+
+ 
+}
