@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/rad-bike/alt%20controllers/">
+        <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/rad-bike/battery-specs/">
       
       
-        <link rel="prev" href="../BLDC%20-%20Tutorials/">
+        <link rel="prev" href="../_overview/">
       
       
-        <link rel="next" href="../battery/">
+        <link rel="next" href="../bike-specs/">
       
       
       <link rel="icon" href="../../../../assets/a3.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Alt controllers - Abhay Gupta</title>
+        <title>Battery - Abhay Gupta</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#battery" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Alt controllers
+              Battery
             
           </span>
         </div>
@@ -1195,12 +1200,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../BLDC%20-%20Tutorials/" class="md-nav__link">
+      <a href="../_overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    BLDC   Tutorials
+    Overview
     
   </span>
   
@@ -1224,32 +1229,10 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Alt controllers
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../battery/" class="md-nav__link">
         
   
   
@@ -1260,6 +1243,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1272,12 +1256,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../bike%20info/" class="md-nav__link">
+      <a href="../bike-specs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Bike info
+    Bike Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bldc-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BLDC Tutorials
     
   </span>
   
@@ -1318,12 +1325,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../controller/" class="md-nav__link">
+      <a href="../controllers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Controller
+    Controllers
     
   </span>
   
@@ -1347,6 +1354,29 @@
   
   <span class="md-ellipsis">
     Motor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stock-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stock controller
     
   </span>
   
@@ -3579,6 +3609,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -3594,57 +3626,28 @@
 
 
 
-  <h1>Alt controllers</h1>
-
-<p>If you have a hardtail, then you can run 2 chains to the rear wheel and you can gear the motor and the pedals separately. That way you can gear them individually to match each other.</p>
-<p>https://www.youtube.com/watch?v=Hy_D-3yngOM</p>
-<p>https://area13ebikes.com/products/radkit
-$229.00
-35a controller and New Color LCD8H
-Plug and play for 2016-2018 Rover bikes</p>
-<p>**The LCD screen has a handlebar mounted switch with three buttons, UP, DOWN, and a center Power button. 
-1. Start with battery and handlebar switch on. The LCD will be off
-2. Turn on LCD by pressing and holding POWER​ button. Holding the UP button will turn on the backlight if needed
-3. Within 5 seconds of turning LCD on, press and hold BOTH UP​, and DOWN​ buttons for a few seconds to enter the settings mode</p>
-<p>P1 Motor Characteristic Parameter Setting Mode
-- (100, 46 for direct drive motors on the Radcity or some Radwagon models)
-P2 Wheel Speed Pulse Signal Setting Mode
-- (5, 6 for upgraded 750w motors)
-P3 Power Assist Control Mode (1)
-P4 Handlebar Startup Mode (0)
-P5 Power Monitoring Mode (15)</p>
-<p>C1 Power Assist Sensor and Parameter Selection Mode (3)
-C2 Motor Phase Classification Coding Mode (0)
-C3 Power Assist Ratio Gear Initialization Mode (1)
-C4 Handlebar Function Setting Mode (0)
-C5 Controller Maximum Current Adjustment Mode (6)
-C6 Backlight Brightness Adjustment Mode (3)
-C7 Cruise Function Setting Mode 
-- (0 or 1. Setting to 1 enables cruise. While riding, hold the DOWN button to enable cruise control. Using the throttle or brakes will disable the cruise.
-C8 Motor Operating Temperature Display Mode (0)
-C9 Power-on Password Setting Mode (0)
-C10 Automatic Restore Default Setting Mode (n)
-C11 Attribute Selection Mode (0)
-C12 Controller Minimum Voltage Adjustment Mode (4)
-C13 ABS brakes of the controller and parameters of anti-charge control (0)
-C14 Power-assist tuning parameters (1)</p>
-<p>Press and hold POWER at any time ​to exit the setup mode</p>
-<p>https://biggamebikes.com/product/35-amp-controller-kit-for-rad-power-bikes/
-- $170
-- Brushless motor controller
-- Model: KT485YP
-- voltage above 60V will burn out and damage this device.
-- RR2 had been capped for EU import at 250W but it has a 500W motor in it!
-- 35amp controller</p>
-<p>Controller for brushless motor
-Model: KT485VPRL-SPS3P
-Maximum current: 35±24
-Rated voltage: Rated current:</p>
-<p>https://electrobikeworld.com/products/25a-controller-for-rad-ebikes
-- $88.99</p>
-<p>https://electrobikeworld.com/products/rad-power-6-upgrade-kit
-- $248.99
-- </p>
+<h1 id="battery">Battery</h1>
+<ul>
+<li>Rating: 48V, 14AH, 672 WH</li>
+<li>model: rad-s1304R</li>
+<li>13inr19/65-4</li>
+<li>Weight: 7.6 lb (3.45 kg)</li>
+<li>https://www.radpowerbikes.com/products/rad-semi-integrated-battery-pack</li>
+<li>center 3 pins are unused</li>
+<li>4 cells in parallel 13 in series 48V 14Ah.</li>
+<li>three small center pins are connected to nothing</li>
+<li>big +- are norm</li>
+</ul>
+<hr />
+<ul>
+<li>Li-Ion chargers are constant current - constant voltage (CC/CV).</li>
+<li>charger is 48V 2A</li>
+<li>Actual float voltage of the Rad charger is 54.6V
+_ electrical connector on the battery is a 5.5mm/2.1mm jack</li>
+<li>You can charge at a faster rate, but the batteries have a 5A fuse in the charge circuit, so that's a limit, and the higher the charge rate the less battery longevity</li>
+</ul>
+<p><img alt="" src="../images/ebike-battery.png" /></p>
+<p><img alt="" src="../images/ebike-battery-serial.png" /></p>
 
 
 
