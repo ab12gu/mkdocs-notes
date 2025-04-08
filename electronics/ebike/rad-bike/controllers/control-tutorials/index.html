@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/rad-bike/stock-controller/">
+        <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/rad-bike/controllers/control-tutorials/">
       
       
-        <link rel="prev" href="../motor/">
+        <link rel="prev" href="../alternative-controllers/">
       
       
-        <link rel="next" href="../../../led-projects/hoop-general/input-voltage/">
+        <link rel="next" href="../stock-controller/">
       
       
-      <link rel="icon" href="../../../../assets/a3.png">
+      <link rel="icon" href="../../../../../assets/a3.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
     
     
       
-        <title>Stock controller - Abhay Gupta</title>
+        <title>BLDC Motor Tutorials - Abhay Gupta</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bldc-motor-tutorials" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Abhay Gupta" class="md-header__button md-logo" aria-label="Abhay Gupta" data-md-component="logo">
+    <a href="../../../../.." title="Abhay Gupta" class="md-header__button md-logo" aria-label="Abhay Gupta" data-md-component="logo">
       
-  <img src="../../../../assets/a5.png" alt="logo">
+  <img src="../../../../../assets/a5.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stock controller
+              BLDC Motor Tutorials
             
           </span>
         </div>
@@ -200,7 +205,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
   
@@ -221,7 +226,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../audio/" class="md-tabs__link">
+        <a href="../../../../../audio/" class="md-tabs__link">
           
   
   
@@ -243,7 +248,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../../" class="md-tabs__link">
           
   
   
@@ -263,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../health/UV/" class="md-tabs__link">
+        <a href="../../../../../health/UV/" class="md-tabs__link">
           
   
   
@@ -283,7 +288,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../networking/" class="md-tabs__link">
+        <a href="../../../../../networking/" class="md-tabs__link">
           
   
   
@@ -303,7 +308,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../recipes/" class="md-tabs__link">
+        <a href="../../../../../recipes/" class="md-tabs__link">
           
   
   
@@ -337,9 +342,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Abhay Gupta" class="md-nav__button md-logo" aria-label="Abhay Gupta" data-md-component="logo">
+    <a href="../../../../.." title="Abhay Gupta" class="md-nav__button md-logo" aria-label="Abhay Gupta" data-md-component="logo">
       
-  <img src="../../../../assets/a5.png" alt="logo">
+  <img src="../../../../../assets/a5.png" alt="logo">
 
     </a>
     Abhay Gupta
@@ -354,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -417,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/" class="md-nav__link">
+      <a href="../../../../../audio/" class="md-nav__link">
         
   
   
@@ -481,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/amplifiers/amp/" class="md-nav__link">
+      <a href="../../../../../audio/amplifiers/amp/" class="md-nav__link">
         
   
   
@@ -553,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/home-audio/speakers/" class="md-nav__link">
+      <a href="../../../../../audio/home-audio/speakers/" class="md-nav__link">
         
   
   
@@ -576,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/home-audio/tv/" class="md-nav__link">
+      <a href="../../../../../audio/home-audio/tv/" class="md-nav__link">
         
   
   
@@ -640,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/home-audio/speakers/daq/" class="md-nav__link">
+      <a href="../../../../../audio/home-audio/speakers/daq/" class="md-nav__link">
         
   
   
@@ -663,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/home-audio/speakers/speaker-amp-req-specs/" class="md-nav__link">
+      <a href="../../../../../audio/home-audio/speakers/speaker-amp-req-specs/" class="md-nav__link">
         
   
   
@@ -686,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/home-audio/speakers/speaker-specs/" class="md-nav__link">
+      <a href="../../../../../audio/home-audio/speakers/speaker-specs/" class="md-nav__link">
         
   
   
@@ -766,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/music/instrument-websites/" class="md-nav__link">
+      <a href="../../../../../audio/music/instrument-websites/" class="md-nav__link">
         
   
   
@@ -789,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/music/music-theory-websites/" class="md-nav__link">
+      <a href="../../../../../audio/music/music-theory-websites/" class="md-nav__link">
         
   
   
@@ -812,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/music/virtual-instruments/" class="md-nav__link">
+      <a href="../../../../../audio/music/virtual-instruments/" class="md-nav__link">
         
   
   
@@ -884,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../audio/physics/sound-physics/" class="md-nav__link">
+      <a href="../../../../../audio/physics/sound-physics/" class="md-nav__link">
         
   
   
@@ -968,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
+      <a href="../../../../" class="md-nav__link">
         
   
   
@@ -991,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soldering/" class="md-nav__link">
+      <a href="../../../../soldering/" class="md-nav__link">
         
   
   
@@ -1055,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../batteries/nickel%E2%80%93cadmium/" class="md-nav__link">
+      <a href="../../../../batteries/nickel%E2%80%93cadmium/" class="md-nav__link">
         
   
   
@@ -1129,7 +1134,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../../../misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
         
   
   
@@ -1165,10 +1193,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
             
   
   
@@ -1181,8 +1209,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_4_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4_3">
             <span class="md-nav__icon md-icon"></span>
             Rad bike
           </label>
@@ -1195,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_overview/" class="md-nav__link">
+      <a href="../../__overview/" class="md-nav__link">
         
   
   
@@ -1218,30 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../battery-specs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Battery
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bike-specs/" class="md-nav__link">
+      <a href="../../_bike-specs/" class="md-nav__link">
         
   
   
@@ -1264,12 +1269,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../bldc-tutorials/" class="md-nav__link">
+      <a href="../../battery-specs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    BLDC Tutorials
+    Battery
     
   </span>
   
@@ -1287,53 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controller-wiring/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Controller wiring
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../controllers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Controllers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../motor/" class="md-nav__link">
+      <a href="../../motor/" class="md-nav__link">
         
   
   
@@ -1357,13 +1316,105 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3_5" id="__nav_3_4_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Controllers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alternative-controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alternative Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    BLDC Motor Tutorials
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stock-controller/" class="md-nav__link">
         
   
   
@@ -1374,6 +1425,13 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1485,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hoop-general/input-voltage/" class="md-nav__link">
+      <a href="../../../../led-projects/hoop-general/input-voltage/" class="md-nav__link">
         
   
   
@@ -1508,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hoop-general/led-hyperlinks/" class="md-nav__link">
+      <a href="../../../../led-projects/hoop-general/led-hyperlinks/" class="md-nav__link">
         
   
   
@@ -1531,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hoop-general/programming/" class="md-nav__link">
+      <a href="../../../../led-projects/hoop-general/programming/" class="md-nav__link">
         
   
   
@@ -1554,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hoop-general/website-summary/" class="md-nav__link">
+      <a href="../../../../led-projects/hoop-general/website-summary/" class="md-nav__link">
         
   
   
@@ -1626,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/" class="md-nav__link">
         
   
   
@@ -1649,7 +1707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/brands/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/brands/" class="md-nav__link">
         
   
   
@@ -1672,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/size/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/size/" class="md-nav__link">
         
   
   
@@ -1736,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/battery/battery/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/battery/battery/" class="md-nav__link">
         
   
   
@@ -1808,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/building/building-hula-hoop/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/building/building-hula-hoop/" class="md-nav__link">
         
   
   
@@ -1880,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/controller/chips%20on%20hand/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/controller/chips%20on%20hand/" class="md-nav__link">
         
   
   
@@ -1903,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/controller/chips/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/controller/chips/" class="md-nav__link">
         
   
   
@@ -1926,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/controller/microcontroller/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/controller/microcontroller/" class="md-nav__link">
         
   
   
@@ -1998,7 +2056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/materials/materials/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/materials/materials/" class="md-nav__link">
         
   
   
@@ -2021,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/materials/polypropylene/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/materials/polypropylene/" class="md-nav__link">
         
   
   
@@ -2093,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/purchasing/polypropylene/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/purchasing/polypropylene/" class="md-nav__link">
         
   
   
@@ -2116,7 +2174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/hula-hoop/purchasing/purchasable-hoops/" class="md-nav__link">
+      <a href="../../../../led-projects/hula-hoop/purchasing/purchasable-hoops/" class="md-nav__link">
         
   
   
@@ -2196,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/purchasable/flowtoys/" class="md-nav__link">
+      <a href="../../../../led-projects/purchasable/flowtoys/" class="md-nav__link">
         
   
   
@@ -2219,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/purchasable/led-bulbs/" class="md-nav__link">
+      <a href="../../../../led-projects/purchasable/led-bulbs/" class="md-nav__link">
         
   
   
@@ -2242,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/purchasable/purchasable-led-strips/" class="md-nav__link">
+      <a href="../../../../led-projects/purchasable/purchasable-led-strips/" class="md-nav__link">
         
   
   
@@ -2265,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/purchasable/purchase-options/" class="md-nav__link">
+      <a href="../../../../led-projects/purchasable/purchase-options/" class="md-nav__link">
         
   
   
@@ -2337,7 +2395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/strips/Programming/" class="md-nav__link">
+      <a href="../../../../led-projects/strips/Programming/" class="md-nav__link">
         
   
   
@@ -2360,7 +2418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/strips/Wiring/" class="md-nav__link">
+      <a href="../../../../led-projects/strips/Wiring/" class="md-nav__link">
         
   
   
@@ -2383,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/strips/led-strip-specs/" class="md-nav__link">
+      <a href="../../../../led-projects/strips/led-strip-specs/" class="md-nav__link">
         
   
   
@@ -2455,7 +2513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/wheels/design/" class="md-nav__link">
+      <a href="../../../../led-projects/wheels/design/" class="md-nav__link">
         
   
   
@@ -2478,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/wheels/on-the-market/" class="md-nav__link">
+      <a href="../../../../led-projects/wheels/on-the-market/" class="md-nav__link">
         
   
   
@@ -2501,7 +2559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../led-projects/wheels/rollerblades/" class="md-nav__link">
+      <a href="../../../../led-projects/wheels/rollerblades/" class="md-nav__link">
         
   
   
@@ -2581,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../magnets/neodymium/" class="md-nav__link">
+      <a href="../../../../magnets/neodymium/" class="md-nav__link">
         
   
   
@@ -2653,7 +2711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rfid/overview/" class="md-nav__link">
+      <a href="../../../../rfid/overview/" class="md-nav__link">
         
   
   
@@ -2717,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rfid/physics/waves/" class="md-nav__link">
+      <a href="../../../../rfid/physics/waves/" class="md-nav__link">
         
   
   
@@ -2789,7 +2847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rfid/readers/reader-buy/" class="md-nav__link">
+      <a href="../../../../rfid/readers/reader-buy/" class="md-nav__link">
         
   
   
@@ -2812,7 +2870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rfid/readers/reader-specs/" class="md-nav__link">
+      <a href="../../../../rfid/readers/reader-specs/" class="md-nav__link">
         
   
   
@@ -2899,7 +2957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../health/UV/" class="md-nav__link">
+      <a href="../../../../../health/UV/" class="md-nav__link">
         
   
   
@@ -2970,7 +3028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/" class="md-nav__link">
+      <a href="../../../../../networking/" class="md-nav__link">
         
   
   
@@ -3034,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/internet/internet-provider-rates/" class="md-nav__link">
+      <a href="../../../../../networking/internet/internet-provider-rates/" class="md-nav__link">
         
   
   
@@ -3057,7 +3115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/internet/internet-speeds/" class="md-nav__link">
+      <a href="../../../../../networking/internet/internet-speeds/" class="md-nav__link">
         
   
   
@@ -3080,7 +3138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/internet/mobile-internet/" class="md-nav__link">
+      <a href="../../../../../networking/internet/mobile-internet/" class="md-nav__link">
         
   
   
@@ -3103,7 +3161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/internet/public-networks/" class="md-nav__link">
+      <a href="../../../../../networking/internet/public-networks/" class="md-nav__link">
         
   
   
@@ -3175,7 +3233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/ip-address/ip/" class="md-nav__link">
+      <a href="../../../../../networking/ip-address/ip/" class="md-nav__link">
         
   
   
@@ -3198,7 +3256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../networking/ip-address/ports/" class="md-nav__link">
+      <a href="../../../../../networking/ip-address/ports/" class="md-nav__link">
         
   
   
@@ -3277,7 +3335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/" class="md-nav__link">
+      <a href="../../../../../recipes/" class="md-nav__link">
         
   
   
@@ -3341,7 +3399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/beans/Pinto%20Beans/" class="md-nav__link">
+      <a href="../../../../../recipes/beans/Pinto%20Beans/" class="md-nav__link">
         
   
   
@@ -3413,7 +3471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/eggplant/baba-ganoush/" class="md-nav__link">
+      <a href="../../../../../recipes/eggplant/baba-ganoush/" class="md-nav__link">
         
   
   
@@ -3436,7 +3494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/eggplant/baingan-bharta/" class="md-nav__link">
+      <a href="../../../../../recipes/eggplant/baingan-bharta/" class="md-nav__link">
         
   
   
@@ -3459,7 +3517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/eggplant/oven-roasted/" class="md-nav__link">
+      <a href="../../../../../recipes/eggplant/oven-roasted/" class="md-nav__link">
         
   
   
@@ -3531,7 +3589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/okra/bhindi-masala/" class="md-nav__link">
+      <a href="../../../../../recipes/okra/bhindi-masala/" class="md-nav__link">
         
   
   
@@ -3554,7 +3612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../recipes/okra/oven-roasted/" class="md-nav__link">
+      <a href="../../../../../recipes/okra/oven-roasted/" class="md-nav__link">
         
   
   
@@ -3602,6 +3660,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -3617,100 +3677,15 @@
 
 
 
-  <h1>Stock controller</h1>
-
-<p>USB to TTL Downloader with Jumper Wires to get device firmware</p>
-<p>Current Controller (broken):</p>
+<h1 id="bldc-motor-tutorials">BLDC Motor Tutorials</h1>
 <ul>
-<li>Accelerated Systems Inc (ASI)</li>
-<li>SN: 2147-00054</li>
-<li>Made in Vietnam</li>
-<li>Model: BAC355-TTL</li>
-<li>24-48V, 55A</li>
-<li>PC-C2-002-US-0004</li>
-<li>Part#: PC100029</li>
-<li>Hardware: 10-000900</li>
-<li>Firmware: 90-000303</li>
-<li>Parameter: 92-0000257</li>
-<li>Revision: 1</li>
-<li>Side barcode:<ul>
-<li>PC-100029</li>
-<li>S2147-00054</li>
+<li>https://www.youtube.com/watch?v=so6hxCqHs_I</li>
+<li>https://www.youtube.com/watch?v=OVXpX-CFdqE</li>
 </ul>
-</li>
-</ul>
-<p>https://electronoobs.com/eng_arduino_tut126_gerber1.php
-https://accelerated-systems-inc.myshopify.com/collections/evaluation-kit/products/bac-350-eval-kit-with-bluetooth
-https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8?source=ps-sl-shoppingads-lpcontext&amp;psc=1&amp;gQT=0</p>
-<p><a href="https://www.acceleratedsystems.com/products/electric-motor-controllers/bac355-bac555">web-link</a>
-- The BAC355 and BAC555 are a mid-power sub-compact Motor Controller (inverter) 
-- designed with the latest in field-oriented vector control (FOC) 
-- ASI’s proprietary adaptive Sensorless Motor Control Algorithms
-- ASI Controllers feature auto-tuning
-    - 120% of a motor's maximum locked rotor torque 
-    - without the need for complicated position sensors</p>
-<table>
-<thead>
-<tr>
-<th><strong>Controller</strong></th>
-<th>BAC355 / BAC555</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Nominal Input Voltage</strong></td>
-<td>24 to 52VDC</td>
-</tr>
-<tr>
-<td><strong>Peak Phase Current</strong></td>
-<td>55A / 75A</td>
-</tr>
-<tr>
-<td><strong>Continuous Electrical Output Power @ 20°C Ambient</strong></td>
-<td>350W @ 36V / 500W @ 36V</td>
-</tr>
-<tr>
-<td><strong>Motor Control Model</strong></td>
-<td>Direct Field-Oriented Control</td>
-</tr>
-<tr>
-<td><strong>Supported Motor Types</strong></td>
-<td>3-Phase Permanent Magnet</td>
-</tr>
-<tr>
-<td><strong>Supported Motor Sensor Types</strong></td>
-<td>Sensorless, 60° Electrical Halls, Sine/Cosine Encoder</td>
-</tr>
-<tr>
-<td><strong>Operating Ambient Temperature Range</strong></td>
-<td>-20 to 50°C</td>
-</tr>
-<tr>
-<td><strong>Inrush current limit</strong></td>
-<td>15A / 30A</td>
-</tr>
-<tr>
-<td><strong>Communication Protocols</strong></td>
-<td>TTL, CAN, Optional BT</td>
-</tr>
-<tr>
-<td><strong>Inputs</strong></td>
-<td>3x Halls, 2x Digital, 4x Analogue</td>
-</tr>
-<tr>
-<td><strong>Outputs</strong></td>
-<td>Hall 5V, 5V, 12V, Low-Side Switch, Optional Switched 6V Light Output</td>
-</tr>
-<tr>
-<td><strong>Generic Connectors</strong><br><br><strong>(In Production)</strong></td>
-<td>Signal - S24B-PADDSS-1  <br>1x KST MPD2-156 or equivalent  <br>4x KST FRD2-156 or equivalent</td>
-</tr>
-<tr>
-<td><strong>Generic Waterproof Connectors</strong><br><br><strong>(SOP - Q2 2024)</strong></td>
-<td>Battery - Higo L513A   <br>Motor - Higo Z910A / Higo Z1115A  <br>Signal 1 - Higo Z1513AM  <br>Signal 2 - Higo Z609FM</td>
-</tr>
-</tbody>
-</table>
+<p>electroBOOM - how to drive a DC motor:
+- https://www.youtube.com/watch?v=yO9xIVv8ryc</p>
+<p>Makshift controller- indian dude
+- https://www.youtube.com/watch?v=_abiaq_IZeE</p>
 
 
 
@@ -3765,10 +3740,10 @@ https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
