@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/rad-bike/bike%20info/">
+        <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/rad-bike/stock-controller/">
       
       
-        <link rel="prev" href="../battery/">
+        <link rel="prev" href="../motor/">
       
       
-        <link rel="next" href="../controller-wiring/">
+        <link rel="next" href="../../../led-projects/hoop-general/input-voltage/">
       
       
       <link rel="icon" href="../../../../assets/a3.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Bike info - Abhay Gupta</title>
+        <title>Stock controller - Abhay Gupta</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bike info
+              Stock controller
             
           </span>
         </div>
@@ -1195,12 +1195,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../BLDC%20-%20Tutorials/" class="md-nav__link">
+      <a href="../_overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    BLDC   Tutorials
+    Overview
     
   </span>
   
@@ -1218,30 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alt%20controllers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Alt controllers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../battery/" class="md-nav__link">
+      <a href="../battery-specs/" class="md-nav__link">
         
   
   
@@ -1261,28 +1238,43 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bike-specs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Bike info
+    Bike Info
     
   </span>
   
 
       </a>
-      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bldc-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BLDC Tutorials
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1318,12 +1310,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../controller/" class="md-nav__link">
+      <a href="../controllers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Controller
+    Controllers
     
   </span>
   
@@ -1352,6 +1344,37 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stock controller
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -3594,19 +3617,100 @@
 
 
 
-  <h1>Bike info</h1>
+  <h1>Stock controller</h1>
 
-<p><a href="https://www.radpowerbikes.com/collections/step-through-electric-bikes/products/radcity-plus-electric-commuter-bike?variant=41445823610976">RadCity™ 5 Plus Electric Commuter Bike</a></p>
+<p>USB to TTL Downloader with Jumper Wires to get device firmware</p>
+<p>Current Controller (broken):</p>
 <ul>
-<li>Top speed: 20 mph</li>
-<li>Range: 50+ miles</li>
-<li>Power: 750W     </li>
-<li>Payload: 275 lb</li>
+<li>Accelerated Systems Inc (ASI)</li>
+<li>SN: 2147-00054</li>
+<li>Made in Vietnam</li>
+<li>Model: BAC355-TTL</li>
+<li>24-48V, 55A</li>
+<li>PC-C2-002-US-0004</li>
+<li>Part#: PC100029</li>
+<li>Hardware: 10-000900</li>
+<li>Firmware: 90-000303</li>
+<li>Parameter: 92-0000257</li>
+<li>Revision: 1</li>
+<li>Side barcode:<ul>
+<li>PC-100029</li>
+<li>S2147-00054</li>
 </ul>
-<p>UL 2849 is a safety standard that certifies electric bicycles (e-bikes) are free of electrical, fire, and shock hazards</p>
-<p>48v battery when fully charged will be about 54 volts</p>
-<p>check the main harness connection coming from the controller through the frame and up to the handlebars</p>
-<p>As the RadCity and older RadWagon have a direct drive motor, use the setting 46 for P1. P2 may also require a change for a correct speed reading.</p>
+</li>
+</ul>
+<p>https://electronoobs.com/eng_arduino_tut126_gerber1.php
+https://accelerated-systems-inc.myshopify.com/collections/evaluation-kit/products/bac-350-eval-kit-with-bluetooth
+https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8?source=ps-sl-shoppingads-lpcontext&amp;psc=1&amp;gQT=0</p>
+<p><a href="https://www.acceleratedsystems.com/products/electric-motor-controllers/bac355-bac555">web-link</a>
+- The BAC355 and BAC555 are a mid-power sub-compact Motor Controller (inverter) 
+- designed with the latest in field-oriented vector control (FOC) 
+- ASI’s proprietary adaptive Sensorless Motor Control Algorithms
+- ASI Controllers feature auto-tuning
+    - 120% of a motor's maximum locked rotor torque 
+    - without the need for complicated position sensors</p>
+<table>
+<thead>
+<tr>
+<th><strong>Controller</strong></th>
+<th>BAC355 / BAC555</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nominal Input Voltage</strong></td>
+<td>24 to 52VDC</td>
+</tr>
+<tr>
+<td><strong>Peak Phase Current</strong></td>
+<td>55A / 75A</td>
+</tr>
+<tr>
+<td><strong>Continuous Electrical Output Power @ 20°C Ambient</strong></td>
+<td>350W @ 36V / 500W @ 36V</td>
+</tr>
+<tr>
+<td><strong>Motor Control Model</strong></td>
+<td>Direct Field-Oriented Control</td>
+</tr>
+<tr>
+<td><strong>Supported Motor Types</strong></td>
+<td>3-Phase Permanent Magnet</td>
+</tr>
+<tr>
+<td><strong>Supported Motor Sensor Types</strong></td>
+<td>Sensorless, 60° Electrical Halls, Sine/Cosine Encoder</td>
+</tr>
+<tr>
+<td><strong>Operating Ambient Temperature Range</strong></td>
+<td>-20 to 50°C</td>
+</tr>
+<tr>
+<td><strong>Inrush current limit</strong></td>
+<td>15A / 30A</td>
+</tr>
+<tr>
+<td><strong>Communication Protocols</strong></td>
+<td>TTL, CAN, Optional BT</td>
+</tr>
+<tr>
+<td><strong>Inputs</strong></td>
+<td>3x Halls, 2x Digital, 4x Analogue</td>
+</tr>
+<tr>
+<td><strong>Outputs</strong></td>
+<td>Hall 5V, 5V, 12V, Low-Side Switch, Optional Switched 6V Light Output</td>
+</tr>
+<tr>
+<td><strong>Generic Connectors</strong><br><br><strong>(In Production)</strong></td>
+<td>Signal - S24B-PADDSS-1  <br>1x KST MPD2-156 or equivalent  <br>4x KST FRD2-156 or equivalent</td>
+</tr>
+<tr>
+<td><strong>Generic Waterproof Connectors</strong><br><br><strong>(SOP - Q2 2024)</strong></td>
+<td>Battery - Higo L513A   <br>Motor - Higo Z910A / Higo Z1115A  <br>Signal 1 - Higo Z1513AM  <br>Signal 2 - Higo Z609FM</td>
+</tr>
+</tbody>
+</table>
 
 
 
