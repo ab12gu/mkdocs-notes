@@ -14,7 +14,7 @@
         <link rel="prev" href="../openwrt/">
       
       
-        <link rel="next" href="../../../recipes/">
+        <link rel="next" href="../setup-router/">
       
       
       <link rel="icon" href="../../../assets/a3.png">
@@ -3424,7 +3424,7 @@
   
   
   <span class="md-ellipsis">
-    Ip address
+    Internet protocol
     
   </span>
   
@@ -3435,7 +3435,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
-            Ip address
+            Internet protocol
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3446,12 +3446,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/ip/" class="md-nav__link">
+      <a href="../../internet-protocol/ip-address/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Internet Protocol (IP)
+    Internet Protocol (IP) Address
     
   </span>
   
@@ -3469,7 +3469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/localhost/" class="md-nav__link">
+      <a href="../../internet-protocol/localhost/" class="md-nav__link">
         
   
   
@@ -3492,7 +3492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/ports/" class="md-nav__link">
+      <a href="../../internet-protocol/ports/" class="md-nav__link">
         
   
   
@@ -3515,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/tcp/" class="md-nav__link">
+      <a href="../../internet-protocol/tcp/" class="md-nav__link">
         
   
   
@@ -3670,10 +3670,74 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#os-openwrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      OS - OpenWRT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citations
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Router to OpenWRT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subnet-mask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Subnet Mask
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4346,6 +4410,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#os-openwrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      OS - OpenWRT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citations
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4363,8 +4445,25 @@
 
 
 <h1 id="router">Router</h1>
+<p>Device that forwards data packets between computer networks.</p>
+<p>Routers can be built from standard computer parts but are mostly specialized purpose-built computers.</p>
+<ul>
+<li>Early routers used software-based forwarding, running on a CPU. </li>
+<li>More sophisticated devices use application-specific integrated circuits (ASICs) to increase performance or add advanced filtering and firewall functionality. </li>
+</ul>
 <h2 id="current-router">Current Router</h2>
 <p>Netgear R6220 Router</p>
+<p>Device Specs:</p>
+<ul>
+<li>CPU: MediaTek MT7621ST, 880 MHz</li>
+<li>RAM: 128 MB</li>
+<li>Flash: 128 MB NAND</li>
+<li>Wi-Fi: Dual-band (2.4 GHz b/g/n via MT7603EN, 5 GHz a/n/ac via MT7612EN)</li>
+<li>Ethernet: 4× LAN + 1× WAN (all Gigabit)</li>
+<li>USB: 1× USB 2.0</li>
+<li>Antennas: 2 external (non-removable)</li>
+</ul>
+<p>More Specs: </p>
 <ul>
 <li>$90</li>
 <li>https://www.amazon.com/NETGEAR-AC1200-External-Antennas-R6220/dp/B00QGOQ2BA</li>
@@ -4385,9 +4484,20 @@
 <li>Denial-of-service (DoS) attack prevention</li>
 <li>Free custom URL using NETGEAR Dynamic DNS service</li>
 </ul>
-<p><img alt="alt text" src="../image.png" /></p>
-<p><img alt="alt text" src="../image-3.png" /></p>
-<p><img alt="alt text" src="../image-4.png" /></p>
+<p><img alt="alt text" src="../images/router-ports.png" /></p>
+<p><img alt="alt text" src="../images/router-led2.png" /></p>
+<p><img alt="alt text" src="../images/router-led1.png" /></p>
+<h2 id="os-openwrt">OS - OpenWRT</h2>
+<ul>
+<li>Supported since: OpenWrt 18.06.0</li>
+<li>https://firmware-selector.openwrt.org/?version=24.10.1&amp;target=ramips%2Fmt7621&amp;id=netgear_r6220</li>
+</ul>
+<h2 id="citations">Citations</h2>
+<ul>
+<li>https://en.wikipedia.org/wiki/Router_(computing)</li>
+<li>https://www.amazon.com/NETGEAR-AC1200-External-Antennas-R6220/dp/B00QGOQ2BA</li>
+<li>https://www.netgear.com/support/product/r6220/</li>
+</ul>
 
 
 

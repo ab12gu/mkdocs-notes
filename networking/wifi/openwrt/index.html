@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://blog.abgup.com/networking/wifi/openwrt/">
       
       
-        <link rel="prev" href="../../ip-address/tcp/">
+        <link rel="prev" href="../../internet-protocol/tcp/">
       
       
         <link rel="next" href="../router/">
@@ -3424,7 +3424,7 @@
   
   
   <span class="md-ellipsis">
-    Ip address
+    Internet protocol
     
   </span>
   
@@ -3435,7 +3435,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
-            Ip address
+            Internet protocol
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3446,12 +3446,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/ip/" class="md-nav__link">
+      <a href="../../internet-protocol/ip-address/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Internet Protocol (IP)
+    Internet Protocol (IP) Address
     
   </span>
   
@@ -3469,7 +3469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/localhost/" class="md-nav__link">
+      <a href="../../internet-protocol/localhost/" class="md-nav__link">
         
   
   
@@ -3492,7 +3492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/ports/" class="md-nav__link">
+      <a href="../../internet-protocol/ports/" class="md-nav__link">
         
   
   
@@ -3515,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ip-address/tcp/" class="md-nav__link">
+      <a href="../../internet-protocol/tcp/" class="md-nav__link">
         
   
   
@@ -3598,6 +3598,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    OpenWRT
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3609,6 +3622,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3628,6 +3669,52 @@
   
   <span class="md-ellipsis">
     Router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Router to OpenWRT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subnet-mask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Subnet Mask
     
   </span>
   
@@ -4290,6 +4377,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4305,8 +4409,42 @@
 
 
 <h1 id="openwrt">OpenWRT</h1>
-<p>Acronym meaning: Open Wireless Router</p>
-<p>Open-source project for embedded operating systems based on Linux, primarily used on embedded devices to route network traffic</p>
+<p>Linux operating system targetting embedded devices, used to route network traffic</p>
+<ul>
+<li>Acronym meaning: Open Wireless Router</li>
+<li>Command-line environment defined w/ busybox (basic linux commands)</li>
+<li>Writable root file system (enabling modification of any file and easily install any software)</li>
+<li>Can install software via <code>opkg</code> package manager (w/ 8000 packages as of 2022)</li>
+</ul>
+<p>Can be configured via web interface LuCl or via command-line. (or other web interfaces like Gargoyle)</p>
+<ul>
+<li>Provide set of scripts (called UCI - Unified configuration interface) to simply configuring via command-line</li>
+</ul>
+<p>Wireless settings to operate as:</p>
+<ul>
+<li>Wireless repeater</li>
+<li>Wireless access point</li>
+<li>Wirelesss bridge</li>
+<li>Captive portal</li>
+<li>OR, combination: ChilliSpot, WiFiDog Captive Portal, etc</li>
+</ul>
+<p>Based on a heavily modified Buildroot system</p>
+<ul>
+<li>OpenWrt Buildroot is a set of Makefiles and patches that automates the process of building the OS</li>
+</ul>
+<p>Embedded devices generally use a different processor/architecture than tranditoinal CPU's in computers, so it requires a cross-compilation toolchain (ex x86 vs MIPS32).</p>
+<p>Requirements:</p>
+<ul>
+<li>Devices equipped with wireless chips from either Qualcomm's Atheros, Ralink (now MediaTek) or any vendor with open source drivers</li>
+<li>Avoids Broadcom chipsets as the feature set is very limited due to having no open drivers</li>
+<li>Recommends choosing a device with a minimum of 16 MB of flash and 128 MB of RAM</li>
+</ul>
+<h2 id="citations">Citations</h2>
+<ul>
+<li>https://en.wikipedia.org/wiki/OpenWrt</li>
+<li>https://openwrt.org/</li>
+<li>https://firmware-selector.openwrt.org/</li>
+</ul>
 
 
 
