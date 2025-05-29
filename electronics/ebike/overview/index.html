@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://blog.abgup.com/electronics/ebike/overview/">
       
       
-        <link rel="prev" href="../misc/">
+        <link rel="prev" href="../../circuit-design/overview/">
       
       
-        <link rel="next" href="../hilltopper/_overview/">
+        <link rel="next" href="../dynamics/custom-geometry/">
       
       
       <link rel="icon" href="../../../assets/a3.png">
@@ -1641,29 +1641,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../misc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Miscellaneous
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1728,6 +1705,78 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dynamics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dynamics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamics/custom-geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Geometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1900,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rad-bike/__overview/" class="md-nav__link">
+      <a href="../rad-bike/" class="md-nav__link">
         
   
   
@@ -7147,8 +7196,21 @@
 <h1 id="overview">Overview</h1>
 <p>An electric bicycle has an integrated electric motor used to assist propulsion.</p>
 <ol>
-<li>Trottle</li>
-<li>Pedal assist</li>
+<li>Throttle<ul>
+<li>throttle sends a signal to the motor controller to deliver power to the motor</li>
+<li>thumb, push, or twist throttle options</li>
+<li>Class 2 ebikes in the U.S. allow throttle up to 20 mph</li>
+</ul>
+</li>
+<li>Pedal assist<ul>
+<li>sensor detects your pedaling activity<ol>
+<li>cadence sensor - detects if peddling (on/off) [feels jerky]</li>
+<li>torque sensor (high end) - detects strength of pedalling</li>
+</ol>
+</li>
+<li>motor controller delivers power to motor</li>
+</ul>
+</li>
 </ol>
 <h2 id="citations">Citations</h2>
 <p><a href="https://en.wikipedia.org/wiki/Electric_bicycle">Electric Bicycle wiki</a></p>
