@@ -789,10 +789,6 @@
          <lastmod>2025-08-29</lastmod>
     </url>
     <url>
-         <loc>https://blog.abgup.com/misc/</loc>
-         <lastmod>2025-08-29</lastmod>
-    </url>
-    <url>
          <loc>https://blog.abgup.com/misc/events/</loc>
          <lastmod>2025-08-29</lastmod>
     </url>
@@ -834,18 +830,6 @@
     </url>
     <url>
          <loc>https://blog.abgup.com/misc/plants/flowers/chrysanthemum/</loc>
-         <lastmod>2025-08-29</lastmod>
-    </url>
-    <url>
-         <loc>https://blog.abgup.com/misc/podcasts/recommended/</loc>
-         <lastmod>2025-08-29</lastmod>
-    </url>
-    <url>
-         <loc>https://blog.abgup.com/misc/toread/sources/</loc>
-         <lastmod>2025-08-29</lastmod>
-    </url>
-    <url>
-         <loc>https://blog.abgup.com/misc/toread/toread/</loc>
          <lastmod>2025-08-29</lastmod>
     </url>
     <url>
@@ -958,6 +942,10 @@
     </url>
     <url>
          <loc>https://blog.abgup.com/software/networking/</loc>
+         <lastmod>2025-08-29</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.abgup.com/software/networking/vpn/</loc>
          <lastmod>2025-08-29</lastmod>
     </url>
     <url>
