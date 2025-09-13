@@ -3353,6 +3353,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hyperlinks" class="md-nav__link">
     <span class="md-ellipsis">
       Hyperlinks
@@ -14037,6 +14055,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hyperlinks" class="md-nav__link">
     <span class="md-ellipsis">
       Hyperlinks
@@ -14065,8 +14101,46 @@
 <p>Python based boundary representation (BREP) modelling framework for 2d/3d modelling.</p>
 <ul>
 <li>Built on the Open Cascade geometric kernel</li>
-<li>Generated from faults of CADQuery, having somewhat restricted Fluent API (method chaining) that is replaced with full python toolbox</li>
+<li>Generated from faults of CADQuery<ul>
+<li>Somewhat restricted Fluent API (method chaining)</li>
+<li>Replaced with full python toolbox</li>
 </ul>
+</li>
+</ul>
+<pre><code>with BuildPart() as my_part:
+    ...
+    with BuildSketch() as my_sketch:
+        ...
+        with BuildLine() as my_line:
+            ...
+        ...
+    ...
+
+</code></pre>
+<p>Code breakdown:</p>
+<ul>
+<li><strong>BuildPart:</strong> builds volume</li>
+<li><strong>BuildSketch:</strong> creates area</li>
+<li><strong>BuildLine:</strong> creates lines</li>
+</ul>
+<h2 id="rendering">Rendering</h2>
+<p>Use <a href="https://github.com/bernhard-42/vscode-ocp-cad-viewer">OCP CAD Viewer</a></p>
+<ul>
+<li>OCP = OCCT-powered (referring to the underlying Open CASCADE Technology).</li>
+</ul>
+<p>How to run: </p>
+<ol>
+<li>via vscode extension</li>
+<li>via terminal:</li>
+</ol>
+<pre><code class="language-bash">$ python -m ocp_vscode
+$ python -m ocp_vscode --theme dark
+</code></pre>
+<p>This will start a Flask server and the viewer can be reached under <code>http://127.0.0.1/viewer</code></p>
+<ul>
+<li><a href="https://github.com/bernhard-42/vscode-ocp-cad-viewer?tab=readme-ov-file#standalone-mode">OCP viewer link</a></li>
+</ul>
+<h2 id="common">Common</h2>
 <h2 id="hyperlinks">Hyperlinks</h2>
 <ul>
 <li><a href="https://build123d.readthedocs.io/en/latest/">build123d readthedocs</a></li>
@@ -14075,10 +14149,13 @@
 <li><a href="https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer">OCP viewer</a></li>
 <li><a href="https://build123d.readthedocs.io/en/latest/external.html#external-tools-and-libraries">build123d libraries and tools</a></li>
 <li><a href="https://build123d.readthedocs.io/en/latest/cheat_sheet.html">build123d cheat sheet</a></li>
-<li><a href="https://github.com/Gigahawk/objects/blob/master/.gitignore">build123d .gitignore</a></li>
 <li><a href="https://www.reddit.com/r/openscad/">OpenSCAD reddit</a></li>
 <li><a href="https://github.com/gumyr/build123d">Github repo</a></li>
 <li><a href="https://discord.gg/7pb7eu8V">Discord server</a></li>
+</ul>
+<p>.gitignore</p>
+<ul>
+<li><a href="https://github.com/Gigahawk/objects/blob/master/.gitignore">build123d .gitignore</a></li>
 </ul>
 
 
