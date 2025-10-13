@@ -15420,21 +15420,21 @@
 <li><a href="https://neovim.io/doc/user/lua-guide.html#lua-guide-config">https://neovim.io/doc/user/lua-guide.html#lua-guide-config</a></li>
 </ul>
 <p>Check if one exists already in neovim</p>
-<pre><code class="language-bash">:echo stdpath('config')
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code>:echo<span class="w"> </span>stdpath<span class="o">(</span><span class="s1">&#39;config&#39;</span><span class="o">)</span>
+</code></pre></div>
 <h3 id="writing-lua-for-config">Writing Lua for config</h3>
 <p>Create an <code>init.lua</code> file in <code>~/.config/nvim/</code></p>
 <p>For vim, you use the <code>:set</code> command, which in Lua is <code>vim.o</code></p>
-<pre><code class="language-lua">vim.o.number = true -- in init.lua
-:vim.o.number -- directly in nvim
-</code></pre>
+<div class="language-lua highlight"><pre><span></span><code><span class="nv">vim</span><span class="p">.</span><span class="py">o</span><span class="p">.</span><span class="py">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c1">-- in init.lua</span>
+<span class="p">:</span><span class="nv">vim</span><span class="p">.</span><span class="py">o</span><span class="p">.</span><span class="py">number</span><span class="w"> </span><span class="c1">-- directly in nvim</span>
+</code></pre></div>
 <p>To use other vim functions in lua</p>
-<pre><code class="language-lua">vim.api.nvim_set_hl(0, &quot;LineNr&quot;, { ctermfg = &quot;LightBlue&quot;, })
-</code></pre>
+<div class="language-lua highlight"><pre><span></span><code><span class="nv">vim</span><span class="p">.</span><span class="py">api</span><span class="p">.</span><span class="nf">nvim_set_hl</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;LineNr&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">ctermfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;LightBlue&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
 <p>The vim.cmd runs vimscript rather than lua in-built functions, so its slower</p>
-<pre><code class="language-lua">vim.cmd(&quot;colorscheme elflord&quot;) 
-vim.cmd.colorscheme(elflord) -- same as above
-</code></pre>
+<div class="language-lua highlight"><pre><span></span><code><span class="nv">vim</span><span class="p">.</span><span class="nf">cmd</span><span class="p">(</span><span class="s2">&quot;colorscheme elflord&quot;</span><span class="p">)</span><span class="w"> </span>
+<span class="nv">vim</span><span class="p">.</span><span class="py">cmd</span><span class="p">.</span><span class="nf">colorscheme</span><span class="p">(</span><span class="nv">elflord</span><span class="p">)</span><span class="w"> </span><span class="c1">-- same as above</span>
+</code></pre></div>
 <h3 id="from-ytb-video-these-are-what-you-need-to-get-started">From ytb video these are what you need to get started:</h3>
 <ul>
 <li>Create our <code>init.lua</code> file</li>
@@ -15513,7 +15513,7 @@ vim.cmd.colorscheme(elflord) -- same as above
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>

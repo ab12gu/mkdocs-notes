@@ -15439,51 +15439,45 @@
 <h2 id="local-development">Local Development</h2>
 <p><strong>Docker Compose</strong></p>
 <p>With a single command, you create and start all the services from your configuration YAML file</p>
-<p>To build and run image:</p>
-<pre><code>$ docker-compose up
-</code></pre>
-<p>To rebuild:</p>
-<pre><code>$ docker-compose up --build
-</code></pre>
-<p>or for a clean slate:</p>
-<pre><code>$ docker-compose down --volumes --remove-orphans
+<p>To build and run image:
+<div class="language-text highlight"><pre><span></span><code>$ docker-compose up
+</code></pre></div></p>
+<p>To rebuild:
+<div class="language-text highlight"><pre><span></span><code>$ docker-compose up --build
+</code></pre></div>
+or for a clean slate:
+<div class="language-text highlight"><pre><span></span><code>$ docker-compose down --volumes --remove-orphans
 $ docker-compose up --build
-</code></pre>
+</code></pre></div></p>
 <h2 id="deployment">Deployment</h2>
-<p>First, you need to create a <strong>Dockerfile</strong> which defines build instructions. It defines how to build a <em>Docker image</em>, being similar to <em>requirements.txt</em> in python or <em>cmake</em> in C/C++. </p>
-<pre><code>$ touch Dockerfile
-</code></pre>
+<p>First, you need to create a <strong>Dockerfile</strong> which defines build instructions. It defines how to build a <em>Docker image</em>, being similar to <em>requirements.txt</em> in python or <em>cmake</em> in C/C++. 
+<div class="language-text highlight"><pre><span></span><code>$ touch Dockerfile
+</code></pre></div></p>
 <ul>
 <li>This file is unique to each container framework/library (cannot generalize file content).</li>
 <li>After generating, add content through researching</li>
 </ul>
 <p>Build the project by running the following command, swapping out DOCKER_USERNAME with your username:</p>
-<pre><code>$ docker build -t DOCKER_USERNAME/getting-started-todo-app .
-</code></pre>
-<p>To verify the image exists locally, you can use the docker image ls command:</p>
-<pre><code>$ docker image ls
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code>$ docker build -t DOCKER_USERNAME/getting-started-todo-app .
+</code></pre></div>
+<p>To verify the image exists locally, you can use the docker image ls command:
+<div class="language-text highlight"><pre><span></span><code>$ docker image ls
+</code></pre></div></p>
 <p>The following command runs an container, attaches interactively to your local command-line session:</p>
-<pre><code>$ docker run -d -p 127.0.0.1:3000:3000 docker/getting-started-todo-app
-</code></pre>
-<ul>
-<li>The -d flag (short for --detach) runs the container in the background.<ul>
-<li>Don't add, I like messages in terminal</li>
-</ul>
-</li>
-<li><code>3000:3000</code> is the <code>&lt;host_port&gt;:&lt;container_port&gt;</code><ul>
-<li>“Hey Docker, if someone hits localhost:3000 on my machine, forward that to port 3000 inside the container.”</li>
-<li>So they can be different</li>
-</ul>
-</li>
-</ul>
+<p><div class="language-text highlight"><pre><span></span><code>$ docker run -d -p 127.0.0.1:3000:3000 docker/getting-started-todo-app
+</code></pre></div>
+- The -d flag (short for --detach) runs the container in the background.
+    - Don't add, I like messages in terminal
+- <code>3000:3000</code> is the <code>&lt;host_port&gt;:&lt;container_port&gt;</code>
+    - “Hey Docker, if someone hits localhost:3000 on my machine, forward that to port 3000 inside the container.”
+    - So they can be different</p>
 <p>After a few seconds, open your web browser to http://localhost:3000. You should see your app.</p>
-<p>Run the docker ps command in a terminal to list your containers.</p>
-<pre><code>$ docker ps
-</code></pre>
-<p>To push the image, use the docker push command. Be sure to replace DOCKER_USERNAME with your username:</p>
-<pre><code>$ docker push DOCKER_USERNAME/getting-started-todo-app
-</code></pre>
+<p>Run the docker ps command in a terminal to list your containers.
+<div class="language-text highlight"><pre><span></span><code>$ docker ps
+</code></pre></div></p>
+<p>To push the image, use the docker push command. Be sure to replace DOCKER_USERNAME with your username:
+<div class="language-text highlight"><pre><span></span><code>$ docker push DOCKER_USERNAME/getting-started-todo-app
+</code></pre></div></p>
 <p>Depending on your upload speeds, this may take a moment to push.</p>
 <h2 id="citations">Citations</h2>
 <ul>
@@ -15538,7 +15532,7 @@ $ docker-compose up --build
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
