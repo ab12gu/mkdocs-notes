@@ -14707,18 +14707,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vim" class="md-nav__link">
+  <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      Vim
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-lua-for-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing Lua for config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-ytb-video-these-are-what-you-need-to-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      From ytb video these are what you need to get started:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lua
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#vim" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started
+      Vim
     </span>
   </a>
   
@@ -15255,18 +15288,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vim" class="md-nav__link">
+  <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      Vim
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-lua-for-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing Lua for config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-ytb-video-these-are-what-you-need-to-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      From ytb video these are what you need to get started:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lua
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#vim" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started
+      Vim
     </span>
   </a>
   
@@ -15290,7 +15356,47 @@
 
 <h1 id="nvim">NVim</h1>
 <ul>
-<li><a href="https://neovim.io/doc/user/">https://neovim.io/doc/user/</a></li>
+<li><a href="https://neovim.io/">https://neovim.io/</a></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>Create a configuration file for neovim editor</p>
+<ul>
+<li><a href="https://neovim.io/doc/user/lua-guide.html#lua-guide-config">https://neovim.io/doc/user/lua-guide.html#lua-guide-config</a></li>
+</ul>
+<p>Check if one exists already in neovim</p>
+<pre><code class="language-bash">:echo stdpath('config')
+</code></pre>
+<h3 id="writing-lua-for-config">Writing Lua for config</h3>
+<p>Create an <code>init.lua</code> file in <code>~/.config/nvim/</code></p>
+<p>For vim, you use the <code>:set</code> command, which in Lua is <code>vim.o</code></p>
+<pre><code class="language-lua">vim.o.number = true -- in init.lua
+:vim.o.number -- directly in nvim
+</code></pre>
+<p>To use other vim functions in lua</p>
+<pre><code class="language-lua">vim.api.nvim_set_hl(0, &quot;LineNr&quot;, { ctermfg = &quot;LightBlue&quot;, })
+</code></pre>
+<p>The vim.cmd runs vimscript rather than lua in-built functions, so its slower</p>
+<pre><code class="language-lua">vim.cmd(&quot;colorscheme elflord&quot;) 
+vim.cmd.colorscheme(elflord) -- same as above
+</code></pre>
+<h3 id="from-ytb-video-these-are-what-you-need-to-get-started">From ytb video these are what you need to get started:</h3>
+<ul>
+<li>Create our <code>init.lua</code> file</li>
+<li>Install <code>lazy.vim</code> our package manager <ul>
+<li>custom theme settings for <code>nvim</code></li>
+</ul>
+</li>
+<li>Add colorscheme to init file: <code>colorscheme (catppuccin)</code> </li>
+<li>Add plugins<ul>
+<li><code>telescope.nvim</code></li>
+<li><code>Treesitter</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="lua">Lua</h2>
+<ul>
+<li><a href="https://neovim.io/doc/user/luaref.html#luaref">https://neovim.io/doc/user/luaref.html#luaref</a></li>
+<li><a href="https://neovim.io/doc/user/lua.html#lua-concepts">https://neovim.io/doc/user/lua.html#lua-concepts</a></li>
 </ul>
 <h2 id="vim">Vim</h2>
 <ul>
@@ -15301,14 +15407,6 @@
 <li><a href="https://www.iopb.res.in/vimbook-OPL.pdf">https://www.iopb.res.in/vimbook-OPL.pdf</a></li>
 <li><a href="file:///Users/abhaygupta/Downloads/VimLikeAPro-sample.pdf">file:///Users/abhaygupta/Downloads/VimLikeAPro-sample.pdf</a></li>
 <li><a href="https://learnvimscriptthehardway.stevelosh.com/">https://learnvimscriptthehardway.stevelosh.com/</a></li>
-</ul>
-<h2 id="getting-started">Getting Started</h2>
-<ul>
-<li>create our init.lua file</li>
-<li>install lazy.vim our package manager </li>
-<li>colorscheme (catppuccin) </li>
-<li>telescope.nvim </li>
-<li>Treesitter. what is it, how does it work?</li>
 </ul>
 
 
