@@ -3349,11 +3349,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common" class="md-nav__link">
+  <a href="#coding-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Common
+      Coding Structure
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Coding Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algebra-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algebra Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -15375,11 +15399,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common" class="md-nav__link">
+  <a href="#coding-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Common
+      Coding Structure
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Coding Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algebra-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algebra Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -15418,21 +15466,6 @@
 </ul>
 </li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code>with BuildPart() as my_part:
-    ...
-    with BuildSketch() as my_sketch:
-        ...
-        with BuildLine() as my_line:
-            ...
-        ...
-    ...
-</code></pre></div>
-<p>Code breakdown:</p>
-<ul>
-<li><strong>BuildPart:</strong> builds volume</li>
-<li><strong>BuildSketch:</strong> creates area</li>
-<li><strong>BuildLine:</strong> creates lines</li>
-</ul>
 <h2 id="rendering">Rendering</h2>
 <p>Use <a href="https://github.com/bernhard-42/vscode-ocp-cad-viewer">OCP CAD Viewer</a></p>
 <ul>
@@ -15443,25 +15476,53 @@
 <li>via vscode extension</li>
 <li>via terminal:</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ocp_vscode
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ocp_vscode
 $<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ocp_vscode<span class="w"> </span>--theme<span class="w"> </span>dark
+$<span class="w"> </span>python<span class="w"> </span>box_generate.py
 </code></pre></div>
-<p>This will start a Flask server and the viewer can be reached under <code>http://127.0.0.1/viewer</code></p>
+<p>This will start a Flask server and the viewer can be reached under</p>
+<div class="language-text highlight"><pre><span></span><code>http://127.0.0.1/&lt;port-number&gt;/viewer
+</code></pre></div>
+<p><a href="https://github.com/bernhard-42/vscode-ocp-cad-viewer?tab=readme-ov-file#standalone-mode">OCP viewer standalone</a></p>
+<h2 id="coding-structure">Coding Structure</h2>
+<p>By default, there is no <a href="https://build123d.readthedocs.io/en/latest/build_part.html#units">units</a>.
+When exporting to external formats like STL or STEP the units are assumed to be millimeters (mm).</p>
+<p>There are two types of way to design, build mode &amp; algebra mode. </p>
+<h3 id="build-mode">Build Mode</h3>
+<div class="language-python highlight"><pre><span></span><code><span class="k">with</span> <span class="n">BuildPart</span><span class="p">()</span> <span class="k">as</span> <span class="n">my_part</span><span class="p">:</span>
+    <span class="o">...</span>
+    <span class="k">with</span> <span class="n">BuildSketch</span><span class="p">()</span> <span class="k">as</span> <span class="n">my_sketch</span><span class="p">:</span>
+        <span class="o">...</span>
+        <span class="k">with</span> <span class="n">BuildLine</span><span class="p">()</span> <span class="k">as</span> <span class="n">my_line</span><span class="p">:</span>
+            <span class="o">...</span>
+        <span class="o">...</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>Code breakdown:</p>
 <ul>
-<li><a href="https://github.com/bernhard-42/vscode-ocp-cad-viewer?tab=readme-ov-file#standalone-mode">OCP viewer link</a></li>
+<li><strong>BuildPart:</strong> builds volume</li>
+<li><strong>BuildSketch:</strong> creates area</li>
+<li><strong>BuildLine:</strong> creates lines</li>
 </ul>
-<h2 id="common">Common</h2>
+<h3 id="algebra-mode">Algebra Mode</h3>
 <h2 id="hyperlinks">Hyperlinks</h2>
+<p>b123d</p>
 <ul>
 <li><a href="https://build123d.readthedocs.io/en/latest/">build123d readthedocs</a></li>
-<li><a href="https://www.reddit.com/r/build123d/">build123d reddit</a></li>
-<li><a href="https://build123d.readthedocs.io/en/latest/build_part.html#units">build123d units</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer">OCP viewer</a></li>
 <li><a href="https://build123d.readthedocs.io/en/latest/external.html#external-tools-and-libraries">build123d libraries and tools</a></li>
 <li><a href="https://build123d.readthedocs.io/en/latest/cheat_sheet.html">build123d cheat sheet</a></li>
-<li><a href="https://www.reddit.com/r/openscad/">OpenSCAD reddit</a></li>
-<li><a href="https://github.com/gumyr/build123d">Github repo</a></li>
+<li><a href="https://github.com/gumyr/build123d">build123d github repo</a></li>
+</ul>
+<p>CAD Viewer</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer">OCP viewer</a></li>
+</ul>
+<p>Social </p>
+<ul>
 <li><a href="https://discord.gg/7pb7eu8V">Discord server</a></li>
+<li><a href="https://www.reddit.com/r/build123d/">build123d reddit</a></li>
+<li><a href="https://www.reddit.com/r/openscad/">OpenSCAD reddit</a></li>
 </ul>
 <p>.gitignore</p>
 <ul>
