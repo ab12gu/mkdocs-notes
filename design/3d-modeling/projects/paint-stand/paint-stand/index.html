@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://blog.abgup.com/design/3d-modeling/projects/paint-stand/paint-stand/">
       
       
-        <link rel="prev" href="../dimensions/">
+        <link rel="prev" href="../../../code-based-modelling/openscad/">
       
       
         <link rel="next" href="../../scissor-paint-stand/scissor-paint-stand/">
@@ -3402,29 +3402,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../dimensions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Dimensions (mm)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -3508,6 +3485,15 @@
   <a href="#cad-software" class="md-nav__link">
     <span class="md-ellipsis">
       CAD Software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Code
     </span>
   </a>
   
@@ -15700,6 +15686,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Code
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -15718,7 +15713,7 @@
 
 <h1 id="paint-stand">Paint Stand</h1>
 <h2 id="project-description">Project Description</h2>
-<p>Elizabeth wanted to remake her paint stand to something more sturdy. So I 3d modelled and printed it. </p>
+<p>Elizabeth wanted to remake her paint stand to something more sturdy. So I 3d modelled and printed it.</p>
 <h2 id="materials">Materials</h2>
 <ul>
 <li>Material: PLA (plastic)</li>
@@ -15728,13 +15723,67 @@
 <p><img src="/design/3d-modeling/projects/paint-stand/images/cardboard-stand-front.png" alt="paint-stand" width="300">
 <img src="/design/3d-modeling/projects/paint-stand/images/cardboard-stand-top.png" alt="paint-stand" width="300"></p>
 <h2 id="cad-software">CAD Software</h2>
-<p>I made an <a href="https://www.instagram.com/p/DKfyQ5iSKEm/">initial design</a> with <code>Fusion360</code>, but noticed that I cannot save my designs locally so I look again to alternative sources. </p>
-<p>Redesigned in code based modelling via <a href="https://blog.abgup.com/design/3d-modeling/code-based-modelling/build123d/">python/<code>build123d</code></a>. </p>
-<p>The print issue that I ran into was the printer I use (Bambu X1 Carbon) has a 256 cm^3 print bed and the given length was 280 cm :(. So for the redesign I added a gap in the middle so I can cut it into 2 or 4 pieces to be printable. </p>
+<p>I made an <a href="https://www.instagram.com/p/DKfyQ5iSKEm/">initial design</a> with <code>Fusion360</code>, but noticed that I cannot save my designs locally so I look again to alternative sources.</p>
+<p>Redesigned in code based modelling via <a href="https://blog.abgup.com/design/3d-modeling/code-based-modelling/build123d/">python/<code>build123d</code></a>.</p>
+<p>The print issue that I ran into was the printer I use (Bambu X1 Carbon) has a 256 cm^3 print bed and the given length was 280 cm :(. So for the redesign I added a gap in the middle so I can cut it into 2 or 4 pieces to be printable.</p>
 <p><img src="/design/3d-modeling/projects/paint-stand/images/paint-stand-cad-gap.png" alt="paint-stand" width="300">
 <img src="/design/3d-modeling/projects/paint-stand/images/paint-stand-cad.png" alt="paint-stand" width="300"></p>
-<p>However, with the new dimensions based on relationship math to the holes. The length dimension "happened" to be exactly 256 cm :), and I removed the middle gap and it fit perfectly without needed to split the CAD model. </p>
+<p>However, with the new dimensions based on relationship math to the holes. The length dimension "happened" to be exactly 256 cm :), and I removed the middle gap and it fit perfectly without needed to split the CAD model.</p>
+<h2 id="source-code">Source Code</h2>
 <p>Code used to generate CAD: <a href="https://github.com/ab12gu/cad-scripts/blob/main/build123d/paint-stand/code/paintstand.py">github.com/ab12gu/paintstand.py</a></p>
+<h1 id="dimensions-mm">Dimensions (mm)</h1>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Length</th>
+<th>Width</th>
+<th>Height</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Holder</td>
+<td>280</td>
+<td>254</td>
+<td>230</td>
+<td></td>
+</tr>
+<tr>
+<td>Large Tubes</td>
+<td>64</td>
+<td>26</td>
+<td></td>
+<td>Top Row</td>
+</tr>
+<tr>
+<td>Small tubes</td>
+<td>51</td>
+<td>19</td>
+<td></td>
+<td>Bottom Rows</td>
+</tr>
+<tr>
+<td>Large Tubes</td>
+<td>25</td>
+<td>51</td>
+<td>127</td>
+<td>N/A, by Chatgpt</td>
+</tr>
+</tbody>
+</table>
+<p>Drop by roughly 1 inch</p>
+<h2 id="number-of-paint-tubes">Number of Paint Tubes</h2>
+<ul>
+<li>5 rows total</li>
+<li>3 large tubes on top 2 rows</li>
+<li>5 small tubes on bottom 3 rows</li>
+</ul>
+<h2 id="citations">Citations</h2>
+<ul>
+<li><a href="https://www.walmart.com/ip/Golden-Artist-Colors-2-Oz-Heavy-Body-Acrylic-Color-Paints/23474383">walmart 2oz tube</a></li>
+</ul>
 
 
 
