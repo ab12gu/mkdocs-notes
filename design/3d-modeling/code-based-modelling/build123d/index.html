@@ -3359,6 +3359,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Sandbox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hyperlinks" class="md-nav__link">
     <span class="md-ellipsis">
       Hyperlinks
@@ -16146,6 +16164,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Sandbox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hyperlinks" class="md-nav__link">
     <span class="md-ellipsis">
       Hyperlinks
@@ -16193,7 +16229,7 @@
 <div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 $<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ocp_vscode
 $<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ocp_vscode<span class="w"> </span>--theme<span class="w"> </span>dark
-$<span class="w"> </span>python<span class="w"> </span>box_generate.py
+$<span class="w"> </span>python<span class="w"> </span>box_generate.py<span class="w"> </span><span class="c1"># need a 2nd terminal or tmux</span>
 </code></pre></div>
 <p>This will start a Flask server and the viewer can be reached under</p>
 <div class="language-text highlight"><pre><span></span><code>http://127.0.0.1/&lt;port-number&gt;/viewer
@@ -16220,6 +16256,32 @@ When exporting to external formats like STL or STEP the units are assumed to be 
 <li><strong>BuildLine:</strong> creates lines</li>
 </ul>
 <h3 id="algebra-mode">Algebra Mode</h3>
+<h2 id="animations">Animations</h2>
+<p><a href="https://github.com/GarryBGoode/gggears" title="https://github.com/GarryBGoode/gggears">https://github.com/GarryBGoode/gggears</a></p>
+<ul>
+<li><a href="https://github.com/bernhard-42/bd_animation/tree/main">https://github.com/bernhard-42/bd_animation/tree/main</a><ul>
+<li>Seems Animation it should be included in ocp_vscode</li>
+</ul>
+</li>
+</ul>
+<p>You can see the animation in the viewer w/ this code:
+<div class="language-python highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">animation</span> <span class="o">=</span> <span class="n">Animation</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">part</span><span class="p">)</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="c1"># 2 seconds split in 0.2 intervals</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="c1"># as many positions as times</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">add_track</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/Group&quot;</span><span class="p">,</span> <span class="s2">&quot;rz&quot;</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span> <span class="c1"># animate the group </span>
+
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">animation</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></p>
+<p>I never toyed with that feature myself, but <a href="https://yeicor-3d.github.io/yet-another-cad-viewer/?preload=logo.glb&amp;preload=logo_hl.glb&amp;preload=logo_hl_tex.glb&amp;preload=fox.glb&amp;preload=img.glb&amp;preload=location.glb">YACV</a> internally uses the <a href="https://www.khronos.org/gltf/&quot;GLTF">GLTF format</a>, which is a common one supporting animations. The documentation for YACV is nearly non-existant, but I guess, it relies on model-viewer for this feature, so maybe <a href="https://modelviewer.dev/examples/animation/index.html"><em>their</em> documentation</a> may help.</p>
+<p>From Mac on Discord CadQuery, Build123d server (wants to know about it after test)</p>
+<h2 id="mobile-sandbox">Mobile Sandbox</h2>
+<p>There are wasm ports that work on mobile</p>
+<ul>
+<li><a href="https://jojain.github.io/build123d-sandbox/">https://jojain.github.io/build123d-sandbox/</a> (works great on android and apparently works ok on newer iphones)</li>
+</ul>
 <h2 id="hyperlinks">Hyperlinks</h2>
 <p>b123d</p>
 <ul>
