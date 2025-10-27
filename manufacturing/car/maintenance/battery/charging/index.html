@@ -10284,9 +10284,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#charging_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wiring" class="md-nav__link">
     <span class="md-ellipsis">
       Wiring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equipment
     </span>
   </a>
   
@@ -16505,9 +16523,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#charging_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wiring" class="md-nav__link">
     <span class="md-ellipsis">
       Wiring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equipment
     </span>
   </a>
   
@@ -16531,6 +16567,57 @@
 
 <h1 id="charging">Charging</h1>
 <p>TODO: Simple Wiring Diagram in KiCAD?</p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Battery phone bank: 5 volt output </li>
+<li>13.5 -&gt; 14.4 volts</li>
+</ul>
+<h2 id="charging_1">Charging</h2>
+<p>Check current battery voltage</p>
+<ul>
+<li>if under 10.5v, its damaged</li>
+<li>full charge sets at 12.6/12.8 volts when car off</li>
+</ul>
+<p>Charging rate</p>
+<ul>
+<li>Set boost module to output 13.2-13.8 volts<ul>
+<li>should charge in roughly 3 days, 40 hours</li>
+</ul>
+</li>
+<li>Normal charges charge at 14.2-14.4 volts, but automatically drop to 13.6 when charged at 80% charge<ul>
+<li>I'm not doing that so just charge slow...</li>
+</ul>
+</li>
+</ul>
+<h2 id="wiring">Wiring</h2>
+<p>Only 2 pairs of Black/Red wires needed</p>
+<ul>
+<li>Positive/Negative from usb output of Portable Charger<ul>
+<li>Goes to input of Boost Module</li>
+</ul>
+</li>
+<li>Boost Module output to Positive/Negative of the Battery</li>
+</ul>
+<p><img alt="" src="../img/car-battery.jpeg" width="350" /></p>
+<p>USB A 2.0 (no data transfer):</p>
+<p>NOTE: 3.0 has 5 pins for RxTx (UART serial) data transfer in addition to the normal D-D+ USB Differential Pair.</p>
+<ul>
+<li>The old protocol is more complex because data is transferred back and forth on the same line </li>
+</ul>
+<p><img alt="" src="../img/usb-A-2.png" width="400" /></p>
+<h2 id="equipment">Equipment</h2>
+<p>Battery</p>
+<ul>
+<li>30,000 mAh</li>
+</ul>
+<p>Portable Charger</p>
+<ul>
+<li><a href="https://www.amazon.com/Portable-Charger-10000mAh-Battery-Charging/dp/B0BMW2985V/">https://www.amazon.com/Portable-Charger-10000mAh-Battery-Charging/dp/B0BMW2985V/</a></li>
+<li>$20</li>
+<li>10000mAh</li>
+<li>Input: 5v, 2a, takes 4.5H~6H to charge</li>
+<li>Output: 5v, 3A </li>
+</ul>
 <p>Step Up Boost Module</p>
 <ul>
 <li>$2</li>
@@ -16553,35 +16640,6 @@
 </ul>
 <p><img alt="" src="../img/boost-module.png" width="350" />
 <img alt="" src="../img/portable-charger.png" width="350" /></p>
-<h2 id="setup">Setup</h2>
-<ul>
-<li>Battery phone bank: 5 volt output </li>
-<li>13.5 -&gt; 14.4 volts</li>
-</ul>
-<p>Portable Charger</p>
-<ul>
-<li><a href="https://www.amazon.com/Portable-Charger-10000mAh-Battery-Charging/dp/B0BMW2985V/">https://www.amazon.com/Portable-Charger-10000mAh-Battery-Charging/dp/B0BMW2985V/</a></li>
-<li>$20</li>
-<li>10000mAh</li>
-<li>Input: 5v, 2a, takes 4.5H~6H to charge</li>
-<li>Output: 5v, 3A </li>
-</ul>
-<h2 id="wiring">Wiring</h2>
-<p>Only 2 pairs of Black/Red wires needed</p>
-<ul>
-<li>Positive/Negative from usb output of Portable Charger<ul>
-<li>Goes to input of Boost Module</li>
-</ul>
-</li>
-<li>Boost Module output to Positive/Negative of the Battery</li>
-</ul>
-<p><img alt="" src="../img/car-battery.jpeg" width="350" /></p>
-<p>USB A 2.0 (no data transfer):</p>
-<p>NOTE: 3.0 has 5 pins for RxTx (UART serial) data transfer in addition to the normal D-D+ USB Differential Pair.</p>
-<ul>
-<li>The old protocol is more complex because data is transferred back and forth on the same line </li>
-</ul>
-<p><img alt="" src="../img/usb-A-2.png" width="400" /></p>
 
 
 
