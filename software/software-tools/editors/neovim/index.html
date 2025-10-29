@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://blog.abgup.com/software/software-tools/editors/editors/">
+        <link rel="canonical" href="https://blog.abgup.com/software/software-tools/editors/neovim/">
       
       
-        <link rel="prev" href="../../docker/">
+        <link rel="prev" href="../scheduling-apps/">
       
       
-        <link rel="next" href="../nvim/">
+        <link rel="next" href="plugins/">
       
       
       <link rel="icon" href="../../../../assets/a3.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Editors - Abhay Gupta</title>
+        <title>Neovim - Abhay Gupta</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#editors" class="md-skip">
+        <a href="#neovim" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Editors
+              Neovim
             
           </span>
         </div>
@@ -15847,48 +15847,15 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Editors
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nvim/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    NVim
     
   </span>
   
@@ -15917,6 +15884,190 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_6_3_3" id="__nav_10_6_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Neovim
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_6_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Neovim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Neovim
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neovim
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-port-vimrc-to-initlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to port .vimrc to init.lua
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lua
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -16437,6 +16588,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-port-vimrc-to-initlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to port .vimrc to init.lua
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lua
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -16451,14 +16655,63 @@
 
 
 
-<h1 id="editors">Editors</h1>
+<h1 id="neovim">Neovim</h1>
 <ul>
-<li><a href="https://www.vim.org/">https://www.vim.org/</a></li>
 <li><a href="https://neovim.io/">https://neovim.io/</a></li>
-<li><a href="https://zed.dev">zed.dev</a><ul>
-<li>made by devs of sublime, written in rust so fast?</li>
+</ul>
+<h2 id="common-commands">Common Commands</h2>
+<div class="language-bash highlight"><pre><span></span><code>:w<span class="w"> </span>!python<span class="w"> </span>%<span class="w"> </span><span class="c1"># runs current file in python</span>
+:vsplit<span class="w"> </span><span class="c1"># splits screen vertically</span>
+:term<span class="w"> </span><span class="c1"># opens terminal obvi...</span>
+</code></pre></div>
+<h2 id="getting-started">Getting Started</h2>
+<ul>
+<li>Create our <code>init.lua</code> file<ul>
+<li><a href="https://neovim.io/doc/user/lua-guide.html#lua-guide-config">https://neovim.io/doc/user/lua-guide.html#lua-guide-config</a></li>
+<li>Check if one is already exists<ul>
+<li>Run <code>:echo stdpath('config')</code></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>Install <code>lazy.vim</code> our package manager<ul>
+<li>custom theme settings for <code>nvim</code></li>
+</ul>
+</li>
+<li>Add colorscheme to init file: <code>colorscheme (catppuccin)</code></li>
+<li>Add plugins<ul>
+<li><code>Treesitter # fancier syntax highlighting (cause some files aren't supported in nvim by default)</code></li>
+<li><code>telescope.nvim</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-port-vimrc-to-initlua">How to port .vimrc to init.lua</h2>
+<p>Create an <code>init.lua</code> file in <code>~/.config/nvim/</code></p>
+<p>For vim, you use the <code>:set</code> command, which in Lua is <code>vim.o</code></p>
+<div class="language-lua highlight"><pre><span></span><code><span class="nv">vim</span><span class="p">.</span><span class="py">o</span><span class="p">.</span><span class="py">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c1">-- in init.lua</span>
+<span class="p">:</span><span class="nv">vim</span><span class="p">.</span><span class="py">o</span><span class="p">.</span><span class="py">number</span><span class="w"> </span><span class="c1">-- directly in nvim</span>
+</code></pre></div>
+<p>To use other vim functions in lua</p>
+<div class="language-lua highlight"><pre><span></span><code><span class="nv">vim</span><span class="p">.</span><span class="py">api</span><span class="p">.</span><span class="nf">nvim_set_hl</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;LineNr&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">ctermfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;LightBlue&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p>The vim.cmd runs vimscript rather than lua in-built functions, so its slower</p>
+<div class="language-lua highlight"><pre><span></span><code><span class="nv">vim</span><span class="p">.</span><span class="nf">cmd</span><span class="p">(</span><span class="s2">&quot;colorscheme elflord&quot;</span><span class="p">)</span>
+<span class="nv">vim</span><span class="p">.</span><span class="py">cmd</span><span class="p">.</span><span class="nf">colorscheme</span><span class="p">(</span><span class="nv">elflord</span><span class="p">)</span><span class="w"> </span><span class="c1">-- same as above</span>
+</code></pre></div>
+<h2 id="lua">Lua</h2>
+<ul>
+<li><a href="https://neovim.io/doc/user/luaref.html#luaref">https://neovim.io/doc/user/luaref.html#luaref</a></li>
+<li><a href="https://neovim.io/doc/user/lua.html#lua-concepts">https://neovim.io/doc/user/lua.html#lua-concepts</a></li>
+</ul>
+<h2 id="vim">Vim</h2>
+<ul>
+<li><a href="https://vimhelp.org/">https://vimhelp.org/ - HTML version of the Vim help pages</a></li>
+<li><a href="https://vimhelp.org/vim_faq.txt.html">https://vimhelp.org/vim_faq.txt.html</a></li>
+<li><a href="https://www.vim.org/">https://www.vim.org/</a></li>
+<li><a href="https://www.vim.org/web.php">https://www.vim.org/web.php</a></li>
+<li><a href="https://www.iopb.res.in/vimbook-OPL.pdf">https://www.iopb.res.in/vimbook-OPL.pdf</a></li>
+<li><a href="file:///Users/abhaygupta/Downloads/VimLikeAPro-sample.pdf">file:///Users/abhaygupta/Downloads/VimLikeAPro-sample.pdf</a></li>
+<li><a href="https://learnvimscriptthehardway.stevelosh.com/">https://learnvimscriptthehardway.stevelosh.com/</a></li>
 </ul>
 
 
