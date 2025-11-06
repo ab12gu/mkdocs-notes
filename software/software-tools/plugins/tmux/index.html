@@ -16280,6 +16280,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortcuts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitnavigate-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split/Navigate Screens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -16292,15 +16310,6 @@
   <a href="#to-start" class="md-nav__link">
     <span class="md-ellipsis">
       To Start
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#splitnavigate-screens" class="md-nav__link">
-    <span class="md-ellipsis">
-      Split/Navigate Screens
     </span>
   </a>
   
@@ -16679,6 +16688,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortcuts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitnavigate-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split/Navigate Screens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -16691,15 +16718,6 @@
   <a href="#to-start" class="md-nav__link">
     <span class="md-ellipsis">
       To Start
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#splitnavigate-screens" class="md-nav__link">
-    <span class="md-ellipsis">
-      Split/Navigate Screens
     </span>
   </a>
   
@@ -16740,6 +16758,26 @@
 </ul>
 <p>Alternative options are to use a plugin for defualt mac terminal zsh or use a non-native terminal like iterm2 or some modern niche one...</p>
 <p>TL;DR: Allows you to run multiple command-line programs at once</p>
+<h2 id="shortcuts">Shortcuts</h2>
+<p><code>C-b</code> is notation for <code>ctrl + b</code></p>
+<p>When in tmux, pressing C-b / then ? shows the key bindings</p>
+<div class="language-text highlight"><pre><span></span><code>C-b ? List key bindings
+</code></pre></div>
+<p>This is the best method to find out what the keybindings are instead of google/chatgpt/<a href="https://github.com/tmux/tmux/wiki/Getting-Started">github</a>.</p>
+<h2 id="splitnavigate-screens">Split/Navigate Screens</h2>
+<div class="language-text highlight"><pre><span></span><code>Vertical split:
+$ ctrl b (let go) shift 5 
+
+Horizontal split
+$ ctrl b (let go) shift &quot;
+
+Switch between panes:
+$ ctrl b (let go) &lt;- or -&gt; arrows
+
+Resize panes:
+$ ctrl b (let go) :resize-pane -L 10   # shrink 10 cells left
+$ ctrl b (let go) :resize-pane -R 10   # grow 10 cells right
+</code></pre></div>
 <h2 id="installation">Installation</h2>
 <p>Via homebrew
 <div class="language-text highlight"><pre><span></span><code>$ brew install tmux
@@ -16752,17 +16790,6 @@
 <li><a href="https://tmuxcheatsheet.com/">https://tmuxcheatsheet.com/</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Tmux">https://en.wikipedia.org/wiki/Tmux</a></li>
 </ul>
-<h2 id="splitnavigate-screens">Split/Navigate Screens</h2>
-<div class="language-text highlight"><pre><span></span><code>Vertical split:
-$ ctrl b (let go) shift 5 
-
-Switch between panes:
-$ ctrl b (let go) &lt;- or -&gt; arrows
-
-Resize panes:
-$ ctrl b (let go) :resize-pane -L 10   # shrink 10 cells left
-$ ctrl b (let go) :resize-pane -R 10   # grow 10 cells right
-</code></pre></div>
 <h2 id="hyperlinks">Hyperlinks</h2>
 <ul>
 <li><a href="https://github.com/tmux/tmux/wiki">https://github.com/tmux/tmux/wiki</a></li>
