@@ -20095,6 +20095,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Files
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -20111,6 +20129,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -22396,6 +22455,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -22413,14 +22502,34 @@
 
 <h1 id="large-files">Large Files</h1>
 <p>Currently repo size 8gb due to images &amp; videos. By default github gives you 10gb per repository and maybe allows you run over... unsure.</p>
-<p>Check github repo size: <a href="https://api.github.com/repos/ab12gu/mkdocs-notes">https://api.github.com/repos/ab12gu/mkdocs-notes</a></p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it">stack overflow discussion</a></li>
-<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits</a></li>
-<li><a href="https://docs.github.com/en/billing/concepts/product-billing/git-lfs">https://docs.github.com/en/billing/concepts/product-billing/git-lfs</a></li>
-<li><a href="https://github.com/github/git-sizer">https://github.com/github/git-sizer</a>, github size breakdown</li>
+<p>Check github repo size:  <a href="https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it">How to see github size? - stack overflow discussion</a></p>
+<ol>
+<li><a href="https://api.github.com/repos/ab12gu/mkdocs-notes">https://api.github.com/repos/ab12gu/mkdocs-notes</a><ul>
+<li>Need to <code>ctrl-f</code> for <code>size</code>, and it shows you the size (including history) of repo<ul>
+<li>expressed in kilobytes (kb)</li>
 </ul>
-<p>Need to port over them to github LFS (Large file system), which </p>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/settings/repositories">https://github.com/settings/repositories</a></li>
+</ol>
+<p>Need to port images/vids to github LFS (Large file system) for blog, because at 500mb as of 25-12-29.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">Github repository limits</a></li>
+<li><a href="https://docs.github.com/en/billing/concepts/product-billing/git-lfs">Git LFS size limits</a></li>
+<li><a href="https://github.com/github/git-sizer">https://github.com/github/git-sizer</a>, github size breakdownA</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Github LFS <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">Installation</a></p>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>git-lfs
+
+<span class="c1"># Update global git config</span>
+$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>install
+
+<span class="c1"># Update system git config</span>
+$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>install<span class="w"> </span>--system
+</code></pre></div>
 
 
 
