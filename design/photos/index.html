@@ -22711,6 +22711,7 @@
 <h1 id="photos">Photos</h1>
 <p>For browser rendering, <code>jpeg</code> seems to render the fastest (has the fastest decoding time).</p>
 <p>Instagram uses jpg (<code>png</code> for logos due to better color rendering), and gifs for loading screens. I figured this out by inspecting the elements on one of their <a href="https://www.instagram.com/p/DR5UD8VkZY6/">ig pages</a>. There is no use of modern compression algos, probably because rendering times are so important for their product/user rention. Memory is cheap!</p>
+<p><img alt="" src="images/instagram-filetype.avif" /></p>
 <p>However, jpeg has slower transfer speed to the client's browser since it has a relatively high file size. The opimization comes when you have the lowest combination of transfer and decode time, which seems to be with the newer compression algos. </p>
 <p><img alt="" src="images/jpeg-speed-chart.avif" /></p>
 <ul>
