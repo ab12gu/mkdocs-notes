@@ -22843,6 +22843,7 @@
 
 
 <h1 id="large-files">Large Files</h1>
+<p>Use <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">github LFS</a>!</p>
 <p>Currently repo size 8gb due to images &amp; videos. By default github gives you 10gb per repository and maybe allows you run over... unsure.</p>
 <p>Check github repo size:  <a href="https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it">How to see github size? - stack overflow discussion</a></p>
 <ol>
@@ -22877,6 +22878,9 @@ $<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>i
 <span class="c1"># Make sure you are in root of repo</span>
 $<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>track<span class="w"> </span><span class="s2">&quot;*.psd&quot;</span>
 &gt;<span class="w"> </span>Tracking<span class="w"> </span><span class="s2">&quot;*.psd&quot;</span>
+
+<span class="c1"># Remove file from </span>
+$<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>filename.ext
 </code></pre></div>
 <p>The file <code>.gitattributes</code> specifies all files that are tracked in LFS storage.</p>
 
