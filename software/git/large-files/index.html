@@ -21002,6 +21002,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -22843,7 +22871,7 @@
 
 
 <h1 id="large-files">Large Files</h1>
-<p>Use <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">github LFS</a>!</p>
+<p>Use <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">github LFS</a>! Quick instructions on how to use on <a href="https://support.atlassian.com/bitbucket-cloud/kb/moving-git-large-files-to-git-lfs-in-bitbucket-cloud/">Atlassian Support</a></p>
 <p>Currently repo size 8gb due to images &amp; videos. By default github gives you 10gb per repository and maybe allows you run over... unsure.</p>
 <p>Check github repo size:  <a href="https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it">How to see github size? - stack overflow discussion</a></p>
 <ol>
@@ -22857,11 +22885,27 @@
 <li><a href="https://github.com/settings/repositories">https://github.com/settings/repositories</a></li>
 </ol>
 <p>Need to port images/vids to github LFS (Large file system) for blog, because at 500mb as of 25-12-29.</p>
+<p>Issue: When you port the files to git lfs, the files still remain stored in main repo in git history. Github and other sites tell you to use odl <a href="https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html"><code>git-filter-repo</code></a> command, which is really not ideal. Use the following:</p>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>migrate<span class="w"> </span>import<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.png,*.jpg&quot;</span>
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-force
+</code></pre></div>
+<p>This will change all your historical commits to refrence the LFS version of the file :). </p>
+<p>If running in <code>github actions</code>, you need to tell the repo to render git lfs files within the yaml file:</p>
+<div class="language-bash highlight"><pre><span></span><code>steps:
+<span class="w">  </span>-<span class="w"> </span>uses:<span class="w"> </span>actions/checkout@v4
+<span class="w">    </span>with:
+<span class="w">      </span>lfs:<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="c1"># This line is crucial</span>
+</code></pre></div>
+<p>Unsure if necessary but can clean repo further:</p>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>reflog<span class="w"> </span>expire<span class="w"> </span>--expire<span class="o">=</span>now<span class="w"> </span>--all<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>now<span class="w"> </span>--aggressive
+</code></pre></div>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">Github repository limits</a></li>
 <li><a href="https://docs.github.com/en/billing/concepts/product-billing/git-lfs">Git LFS size limits</a></li>
 <li><a href="https://github.com/github/git-sizer">https://github.com/github/git-sizer</a>, github size breakdownA</li>
+<li><a href="https://www.atlassian.com/git/tutorials/git-lfs#what-is-git-lfs">Atlassian docs on LFS</a></li>
+<li><a href="https://git-lfs.com/">https://git-lfs.com/</a></li>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>Github LFS <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">Installation</a></p>
