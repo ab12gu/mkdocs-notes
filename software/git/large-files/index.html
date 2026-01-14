@@ -23194,6 +23194,20 @@
 
 <h1 id="large-files">Large Files</h1>
 <p>Use <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">github LFS</a>! Quick instructions on how to use on <a href="https://support.atlassian.com/bitbucket-cloud/kb/moving-git-large-files-to-git-lfs-in-bitbucket-cloud/">Atlassian Support</a></p>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># From Attlassian support referenced above</span>
+$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>migrate<span class="w"> </span>import<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.png,*.jpg&quot;</span><span class="w"> </span>everything<span class="w"> </span><span class="c1"># Removes artifacts of files in git history</span>
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-force
+</code></pre></div>
+<p>This will change all your historical commits to reference the LFS version of the file :). </p>
+<p>To list lfs files in the repo after migration :):</p>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>ls-files<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.jpeg
+</code></pre></div>
+<p>If running in <code>github actions</code>, you need to tell the repo to render git lfs files within the yaml file:</p>
+<div class="language-bash highlight"><pre><span></span><code>steps:
+<span class="w">  </span>-<span class="w"> </span>uses:<span class="w"> </span>actions/checkout@v4
+<span class="w">    </span>with:
+<span class="w">      </span>lfs:<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="c1"># This line is crucial</span>
+</code></pre></div>
 <p>Currently repo size 8gb due to images &amp; videos. By default github gives you 10gb per repository and maybe allows you run over... unsure.</p>
 <p>Check github repo size:  <a href="https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it">How to see github size? - stack overflow discussion</a></p>
 <ol>
@@ -23208,16 +23222,7 @@
 </ol>
 <p>Need to port images/vids to github LFS (Large file system) for blog, because at 500mb as of 25-12-29.</p>
 <p>Issue: When you port the files to git lfs, the files still remain stored in main repo in git history. Github and other sites tell you to use odl <a href="https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html"><code>git-filter-repo</code></a> command, which is really not ideal. Use the following:</p>
-<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>migrate<span class="w"> </span>import<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.png,*.jpg&quot;</span>
-$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-force
-</code></pre></div>
-<p>This will change all your historical commits to refrence the LFS version of the file :). </p>
-<p>If running in <code>github actions</code>, you need to tell the repo to render git lfs files within the yaml file:</p>
-<div class="language-bash highlight"><pre><span></span><code>steps:
-<span class="w">  </span>-<span class="w"> </span>uses:<span class="w"> </span>actions/checkout@v4
-<span class="w">    </span>with:
-<span class="w">      </span>lfs:<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="c1"># This line is crucial</span>
-</code></pre></div>
+<p>NOTE: the images may be added to a cache and mess up the lfs system when creating new clone!</p>
 <p>Unsure if necessary but can clean repo further:</p>
 <div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>reflog<span class="w"> </span>expire<span class="w"> </span>--expire<span class="o">=</span>now<span class="w"> </span>--all<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>now<span class="w"> </span>--aggressive
 </code></pre></div>
