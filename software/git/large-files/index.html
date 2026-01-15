@@ -23453,7 +23453,7 @@ $<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>--
 <h2 id="remove-tracked-files-from-commit-history">Remove tracked files from commit history</h2>
 <div class="language-bash highlight"><pre><span></span><code><span class="c1"># From Attlassian support referenced above</span>
 $<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>migrate<span class="w"> </span>import<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.png,*.jpg&quot;</span><span class="w"> </span>everything<span class="w"> </span><span class="c1"># Removes artifacts of files in git history</span>
-$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-force
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>--force
 </code></pre></div>
 <p>This will change all your historical commits to reference the LFS version of the file :). </p>
 <p>To list lfs files in the repo after migration :):</p>
