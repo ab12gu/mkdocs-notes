@@ -20640,10 +20640,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
+  <a href="#repo-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links
+        Repo Size
       
     </span>
   </a>
@@ -20655,6 +20655,50 @@
     <span class="md-ellipsis">
       
         Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-tracked-files-from-commit-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove tracked files from commit history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rationale-of-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale of starting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-files-in-commit-history-extended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove files in commit history (extended)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
       
     </span>
   </a>
@@ -23296,10 +23340,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
+  <a href="#repo-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links
+        Repo Size
       
     </span>
   </a>
@@ -23311,6 +23355,50 @@
     <span class="md-ellipsis">
       
         Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-tracked-files-from-commit-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove tracked files from commit history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rationale-of-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale of starting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-files-in-commit-history-extended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove files in commit history (extended)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
       
     </span>
   </a>
@@ -23336,46 +23424,12 @@
 
 <h1 id="large-files">Large Files</h1>
 <p>Use <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">github LFS</a>! Quick instructions on how to use on <a href="https://support.atlassian.com/bitbucket-cloud/kb/moving-git-large-files-to-git-lfs-in-bitbucket-cloud/">Atlassian Support</a></p>
-<div class="language-bash highlight"><pre><span></span><code><span class="c1"># From Attlassian support referenced above</span>
-$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>migrate<span class="w"> </span>import<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.png,*.jpg&quot;</span><span class="w"> </span>everything<span class="w"> </span><span class="c1"># Removes artifacts of files in git history</span>
-$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-force
-</code></pre></div>
-<p>This will change all your historical commits to reference the LFS version of the file :). </p>
-<p>To list lfs files in the repo after migration :):</p>
-<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>ls-files<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.jpeg
-</code></pre></div>
-<p>If running in <code>github actions</code>, you need to tell the repo to render git lfs files within the yaml file:</p>
-<div class="language-bash highlight"><pre><span></span><code>steps:
-<span class="w">  </span>-<span class="w"> </span>uses:<span class="w"> </span>actions/checkout@v4
-<span class="w">    </span>with:
-<span class="w">      </span>lfs:<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="c1"># This line is crucial</span>
-</code></pre></div>
-<p>Currently repo size 8gb due to images &amp; videos. By default github gives you 10gb per repository and maybe allows you run over... unsure.</p>
+<h2 id="repo-size">Repo Size</h2>
 <p>Check github repo size:  <a href="https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it">How to see github size? - stack overflow discussion</a></p>
 <ol>
-<li><a href="https://api.github.com/repos/ab12gu/mkdocs-notes">https://api.github.com/repos/ab12gu/mkdocs-notes</a><ul>
-<li>Need to <code>ctrl-f</code> for <code>size</code>, and it shows you the size (including history) of repo<ul>
-<li>expressed in kilobytes (kb)</li>
-</ul>
-</li>
-</ul>
-</li>
 <li><a href="https://github.com/settings/repositories">https://github.com/settings/repositories</a></li>
+<li><a href="https://api.github.com/repos/ab12gu/mkdocs-notes">https://api.github.com/repos/ab12gu/mkdocs-notes</a>, under <code>size</code> in kilobytes (kb)</li>
 </ol>
-<p>Need to port images/vids to github LFS (Large file system) for blog, because at 500mb as of 25-12-29.</p>
-<p>Issue: When you port the files to git lfs, the files still remain stored in main repo in git history. Github and other sites tell you to use odl <a href="https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html"><code>git-filter-repo</code></a> command, which is really not ideal. Use the following:</p>
-<p>NOTE: the images may be added to a cache and mess up the lfs system when creating new clone!</p>
-<p>Unsure if necessary but can clean repo further:</p>
-<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>reflog<span class="w"> </span>expire<span class="w"> </span>--expire<span class="o">=</span>now<span class="w"> </span>--all<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>now<span class="w"> </span>--aggressive
-</code></pre></div>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">Github repository limits</a></li>
-<li><a href="https://docs.github.com/en/billing/concepts/product-billing/git-lfs">Git LFS size limits</a></li>
-<li><a href="https://github.com/github/git-sizer">https://github.com/github/git-sizer</a>, github size breakdownA</li>
-<li><a href="https://www.atlassian.com/git/tutorials/git-lfs#what-is-git-lfs">Atlassian docs on LFS</a></li>
-<li><a href="https://git-lfs.com/">https://git-lfs.com/</a></li>
-</ul>
 <h2 id="installation">Installation</h2>
 <p>Github LFS <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage">Installation</a></p>
 <div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>git-lfs
@@ -23396,6 +23450,42 @@ $<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>t
 $<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>filename.ext
 </code></pre></div>
 <p>The file <code>.gitattributes</code> specifies all files that are tracked in LFS storage.</p>
+<h2 id="remove-tracked-files-from-commit-history">Remove tracked files from commit history</h2>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># From Attlassian support referenced above</span>
+$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>migrate<span class="w"> </span>import<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.png,*.jpg&quot;</span><span class="w"> </span>everything<span class="w"> </span><span class="c1"># Removes artifacts of files in git history</span>
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-force
+</code></pre></div>
+<p>This will change all your historical commits to reference the LFS version of the file :). </p>
+<p>To list lfs files in the repo after migration :):</p>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>lfs<span class="w"> </span>ls-files<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.jpeg
+</code></pre></div>
+<p>If running in <code>github actions</code>, you need to tell the repo to render git lfs files within the yaml file:</p>
+<div class="language-bash highlight"><pre><span></span><code>steps:
+<span class="w">  </span>-<span class="w"> </span>uses:<span class="w"> </span>actions/checkout@v4
+<span class="w">    </span>with:
+<span class="w">      </span>lfs:<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="c1"># This line is crucial</span>
+</code></pre></div>
+<h2 id="rationale-of-starting">Rationale of starting</h2>
+<p>Currently mkdocs repo size is <code>8gb</code> due to images &amp; videos. By default github gives you 10gb per repository and maybe allows you run over... unsure.</p>
+<p>After porting images/vids to github LFS, got it down to under 500mb.</p>
+<h2 id="remove-files-in-commit-history-extended">Remove files in commit history (extended)</h2>
+<p><strong>Issue:</strong> When you port the files to git lfs, the files still remain stored in main repo in git history. Github and other sites tell you to use odl <a href="https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html"><code>git-filter-repo</code></a> command, which is really not ideal. Use <code>git migrate</code> instead, noted above.</p>
+<p><strong>NOTE:</strong> the images may be added to a cache and mess up the lfs system when creating new clone!</p>
+<ul>
+<li>Add <code>.cache</code> to <code>.gitignore</code></li>
+</ul>
+<p>Unsure if necessary but can clean repo further:</p>
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>reflog<span class="w"> </span>expire<span class="w"> </span>--expire<span class="o">=</span>now<span class="w"> </span>--all<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>now<span class="w"> </span>--aggressive
+$<span class="w"> </span>git<span class="w"> </span>prune<span class="w"> </span><span class="c1"># removes all unattached files</span>
+</code></pre></div>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">Github repository limits</a></li>
+<li><a href="https://docs.github.com/en/billing/concepts/product-billing/git-lfs">Git LFS size limits</a></li>
+<li><a href="https://github.com/github/git-sizer">https://github.com/github/git-sizer</a>, github size breakdownA</li>
+<li><a href="https://www.atlassian.com/git/tutorials/git-lfs#what-is-git-lfs">Atlassian docs on LFS</a></li>
+<li><a href="https://git-lfs.com/">https://git-lfs.com/</a></li>
+</ul>
 
 
 
