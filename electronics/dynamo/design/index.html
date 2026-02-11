@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://notes.abgup.com/electronics/dynamo/dynamo/">
+        <link rel="canonical" href="https://notes.abgup.com/electronics/dynamo/design/">
       
       
-        <link rel="prev" href="../../circuit-design/overview/">
+        <link rel="prev" href="../">
       
       
         <link rel="next" href="../../ebike/overview/">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dynamo - Abhay Gupta</title>
+        <title>Design - Abhay Gupta</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamo" class="md-skip">
+        <a href="#design" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamo
+              Design
             
           </span>
         </div>
@@ -6374,6 +6374,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -6393,7 +6421,7 @@
   <span class="md-ellipsis">
     
   
-    Dynamo
+    Design
   
 
     
@@ -6411,7 +6439,7 @@
   <span class="md-ellipsis">
     
   
-    Dynamo
+    Design
   
 
     
@@ -6437,10 +6465,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
+  <a href="#prototype-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links
+        Prototype #1
       
     </span>
   </a>
@@ -6448,10 +6476,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#prototype-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        Prototype #2
       
     </span>
   </a>
@@ -25140,10 +25168,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
+  <a href="#prototype-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links
+        Prototype #1
       
     </span>
   </a>
@@ -25151,10 +25179,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#prototype-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        Prototype #2
       
     </span>
   </a>
@@ -25178,21 +25206,29 @@
 
 
 
-<h1 id="dynamo">Dynamo</h1>
-<p>Pitched by Alex Ross</p>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://www.sinewavecycles.com/collections/chargers/products/sinewave-cycles-beacon-2">Light</a></li>
-<li><a href="https://www.sinewavecycles.com/collections/chargers/products/sinewave-revolution">USB Charger</a></li>
-<li><a href="https://jefe.bike/products/klite-minimalist-dynamo-to-usb-charging-kit-sp-hub?gad_campaignid=17426299103">Dynamo charger</a></li>
-<li><a href="https://www.instructables.com/DIY-BICYCLE-USB-CHARGER-Fahrradlader-V31/">Instructables Build</a></li>
+<h1 id="design">Design</h1>
+<p>Need to connect it to a circuit and log the data of the output voltage via an app :). Then can decide if these prototypes work. </p>
+<h2 id="prototype-1">Prototype #1</h2>
+<ol>
+<li><a href="https://www.aliexpress.us/item/3256811439121325.html?">Hand Crank (dynamo) Cell Phone Charger, $3</a><ul>
+<li>Take apart to get electrical components from it</li>
+<li>This is the rectifier &amp; voltage regulator to output ~5v (0-400mA)</li>
 </ul>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>I have a wheel you could use. </li>
-<li>The charging capacity is what I really want for bikepacking</li>
-<li>Its just that they put out such little power that its tough to charge off them directly. They need a cache to build enough voltage</li>
+</li>
+<li>Some 5v Battery bank </li>
+<li>Circuit to charge/output battery (i have it)</li>
+</ol>
+<h2 id="prototype-2">Prototype #2</h2>
+<ol>
+<li>Extract only rectifier from dynamo (or build your own)</li>
+<li>Add a supercapacitor(s)<ul>
+<li>Accepts low voltage &amp; high current</li>
 </ul>
+</li>
+<li>Some output regular to ensure 5v (probably some mechanism in hand crank already)</li>
+<li>Some 5v Battery Bank</li>
+<li>Circuit to charge/output battery (i have it)</li>
+</ol>
 
 
 
