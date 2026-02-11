@@ -925,15 +925,19 @@
          <lastmod>2026-02-11</lastmod>
     </url>
     <url>
-         <loc>https://notes.abgup.com/manufacturing/cars/battery/battery/</loc>
+         <loc>https://notes.abgup.com/manufacturing/cars/components/hybrid-battery/prius-battery/</loc>
          <lastmod>2026-02-11</lastmod>
     </url>
     <url>
-         <loc>https://notes.abgup.com/manufacturing/cars/battery/charging/</loc>
+         <loc>https://notes.abgup.com/manufacturing/cars/components/starter-battery/</loc>
          <lastmod>2026-02-11</lastmod>
     </url>
     <url>
-         <loc>https://notes.abgup.com/manufacturing/cars/battery/maintainance/</loc>
+         <loc>https://notes.abgup.com/manufacturing/cars/components/starter-battery/maintainance/</loc>
+         <lastmod>2026-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.abgup.com/manufacturing/cars/components/starter-battery/prius-starter-battery/</loc>
          <lastmod>2026-02-11</lastmod>
     </url>
     <url>
@@ -966,6 +970,10 @@
     </url>
     <url>
          <loc>https://notes.abgup.com/manufacturing/cars/parts/purchasing/</loc>
+         <lastmod>2026-02-11</lastmod>
+    </url>
+    <url>
+         <loc>https://notes.abgup.com/manufacturing/cars/projects/charging/</loc>
          <lastmod>2026-02-11</lastmod>
     </url>
     <url>
